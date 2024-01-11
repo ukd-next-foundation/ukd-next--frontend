@@ -1,7 +1,8 @@
 import cls from './PercentageCircle.module.scss'
 
-interface IPercentageCircle {}
 
+
+//TODO: Check circle on other android phone
 const PercentageCircle = () => {
   return (
     <>
@@ -43,3 +44,5 @@ const PercentageCircle = () => {
 }
 
 export default PercentageCircle
+
+//https://www.figma.com/file/UdaXjuBhYTKJwz91sFP8l7/UKD-NEXT-(Copy)?type=design&t=cM7e1QAt5xYYxm8B-6

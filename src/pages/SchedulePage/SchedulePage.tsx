@@ -1,5 +1,6 @@
-import cls from './SchedulePage.module.scss'
+import cls from "./SchedulePage.module.scss";
 function SchedulePage() {
+  //TODO: Change subjects to lectures
   return (
     <div className={cls.schedule}>
       <div className={cls.calendar}>
@@ -57,7 +58,9 @@ function SchedulePage() {
                 <small className={cls.subject_time}>10:00</small>
               </div>
               <div className={cls.subject_details}>
-                <small className={cls.subject_lecturer}>Вик. Мосюрчак В.М </small>
+                <small className={cls.subject_lecturer}>
+                  Вик. Мосюрчак В.М{" "}
+                </small>
                 <small className={cls.subject_location}>
                   ауд. <b>307</b>
                 </small>
@@ -69,7 +72,9 @@ function SchedulePage() {
                 <small className={cls.subject_time}>10:00</small>
               </div>
               <div className={cls.subject_details}>
-                <small className={cls.subject_lecturer}>Вик. Мосюрчак В.М </small>
+                <small className={cls.subject_lecturer}>
+                  Вик. Мосюрчак В.М{" "}
+                </small>
                 <small className={cls.subject_location}>
                   ауд. <b>307</b>
                 </small>
@@ -81,7 +86,9 @@ function SchedulePage() {
                 <small className={cls.subject_time}>10:00</small>
               </div>
               <div className={cls.subject_details}>
-                <small className={cls.subject_lecturer}>Вик. Мосюрчак В.М </small>
+                <small className={cls.subject_lecturer}>
+                  Вик. Мосюрчак В.М{" "}
+                </small>
                 <small className={cls.subject_location}>
                   ауд. <b>307</b>
                 </small>
@@ -91,7 +98,7 @@ function SchedulePage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default SchedulePage
+export default SchedulePage;
