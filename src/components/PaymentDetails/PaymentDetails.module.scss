@@ -1,0 +1,46 @@
+@import 'src/scss/inheritance';
+@import 'src/scss/mixin';
+@import 'src/scss/var';
+
+.payment_header,
+.payment {
+  @extend %flex-center;
+}
+
+.payment_container {
+  padding: 10px;
+}
+
+.payment_main {
+  margin-left: 40px;
+}
+
+.payment_header {
+  justify-content: flex-start;
+  h1 {
+    @extend %page-heading;
+    margin-left: 9px;
+  }
+  img {
+    margin-top: -5px;
+  }
+}
+
+.payment {
+  padding: 10px;
+  align-items: start;
+}
+
+.payment_item {
+  margin-top: 25px;
+
+  h4 {
+    @extend %heading-4;
+    font-weight: 400;
+  }
+  p {
+    line-height: 22px;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+}

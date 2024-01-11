@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Fixel Text';
+  src: url('./Fixel/FixelText-Bold.woff2') format('woff2'),
+    url('./Fixel/FixelText-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  src: url('./Fixel/FixelText-SemiBold.woff2') format('woff2'),
+    url('./Fixel/FixelText-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  src: url('./Fixel/FixelText-Medium.woff2') format('woff2'),
+    url('./Fixel/FixelText-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  src: url('./Fixel/FixelText-Regular.woff2') format('woff2'),
+    url('./Fixel/FixelText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  src: url('./Fixel/FixelText-Light.woff2') format('woff2'),
+    url('./Fixel/FixelText-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  src: url('./Fixel/FixelText-Thin.woff2') format('woff2'),
+    url('./Fixel/FixelText-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}

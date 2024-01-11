@@ -1,0 +1,44 @@
+@import 'src/scss/mixin';
+@import 'src/scss/var';
+@import 'src/scss/inheritance';
+
+.author_info {
+  @extend %flex-center;
+  justify-content: start;
+  gap: 15px;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  small {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  p {
+    font-weight: 400;
+  }
+}
+
+.news_content {
+  margin-top: 16px;
+  h4 {
+    font-weight: 400;
+  }
+}
+
+.news_description {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.news_container {
+  padding: 20px;
+}
+
+.news_item {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f1f1f2;
+}

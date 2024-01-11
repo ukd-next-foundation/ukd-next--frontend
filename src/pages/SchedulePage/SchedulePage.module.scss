@@ -1,0 +1,179 @@
+@import 'src/scss/mixin';
+@import 'src/scss/var';
+@import 'src/scss/inheritance';
+
+.days_of_week {
+  @extend %flex-center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.subject_info {
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    font-weight: 600;
+  }
+}
+
+.subject {
+  padding: 0px 20px;
+  border-radius: 15px;
+  background: #f1f1f2;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: black;
+  &_details {
+    @extend %flex-center;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  &:hover {
+    background: $main;
+    transform: scale(1.05);
+    small,
+    p,
+    h3 {
+      color: white;
+    }
+  }
+}
+
+.subject_active {
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+
+  .step {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: solid 2px $main;
+    background: white;
+    @extend %flex-center;
+    align-items: flex-start;
+  }
+
+  .stick:last-child {
+    display: none;
+  }
+}
+
+.step_active {
+  width: 20px !important;
+  height: 20px !important;
+  position: relative;
+  &:before {
+    content: '';
+    width: 80%;
+    height: 80%;
+    margin-top: 2px;
+    background: $main;
+    border-radius: 50%;
+  }
+}
+
+.stick {
+  height: 95px;
+  width: 1.5px;
+  background: $main;
+}
+
+.schedule_main {
+  @extend %flex-center;
+  justify-content: space-between;
+}
+
+.subjects_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.schedule {
+  padding: 30px;
+}
+
+.calendar {
+  padding-bottom: 50px;
+}
+
+.calendar_header {
+  padding-bottom: 35px;
+  small {
+    color: grey;
+  }
+}
+
+.today {
+  padding-top: 15px;
+}
+
+.day {
+  @extend %flex-center;
+  flex-direction: column;
+  small {
+    color: grey;
+    font-size: 16px;
+  }
+  p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.subjects {
+  flex-grow: 2;
+}
+
+.steps_container {
+  display: flex;
+  flex-grow: 2;
+}
+
+.day_active {
+  position: relative;
+  animation: 0.3s animation1 ease-in-out;
+  transform: translateY(-5px);
+
+  small,
+  p {
+    font-weight: bold;
+    color: $main;
+    border-bottom: 1px solid $main;
+  }
+  &:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: $main;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -10px;
+  }
+}
+
+@keyframes animation1 {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+.subject_time,
+.subject_lecturer,
+.subject_location {
+  color: grey;
+}

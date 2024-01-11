@@ -1,0 +1,41 @@
+@import 'src/scss/inheritance';
+@import 'src/scss/mixin';
+@import 'src/scss/var';
+
+.circular_chart {
+  display: block;
+  max-width: 80%;
+  max-height: 200px;
+}
+.that_circle {
+  fill: none;
+  stroke-width: 4;
+  animation: progress 0.7s ease-out forwards;
+  box-shadow: 0 8px 25px 0 #e5e5e5;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.percentage {
+  fill: #4285f4;
+  font-size: 0.375em;
+  text-anchor: middle;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+.percentage_done {
+  fill: #9b9b9b;
+  font-size: 0.2em;
+  font-family: AvenirNext;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+}

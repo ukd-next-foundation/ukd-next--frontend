@@ -1,0 +1,41 @@
+@import 'src/scss/mixin';
+@import 'src/scss/var';
+@import 'src/scss/inheritance';
+
+.journals_container {
+  padding: 30px;
+  h1 {
+    @extend %page-heading;
+  }
+
+  h4 {
+    @extend %heading-4;
+    margin-bottom: 30px;
+  }
+}
+
+.subject_item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 17px;
+  padding-bottom: 17px;
+}
+
+.subject_categories {
+  margin-top: 40px;
+}
+
+.general_subjects,
+.specialized_subjects {
+  margin-top: 20px;
+}
+
+.subject_info {
+  width: 100%;
+  @extend %flex-center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(#dedcdc, 0.3);
+  justify-content: space-between;
+}
