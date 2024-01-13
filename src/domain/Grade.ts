@@ -1,9 +1,9 @@
 import { GradeType, DateType, GradeValue } from "../shared-kernel";
 
 export interface Grade {
-  gradeDate: DateType;
-  gradeType: GradeType;
-  gradeValue: GradeValue;
+  date: DateType;
+  type: GradeType;
+  value: GradeValue;
 }
 
 
