@@ -1,9 +1,14 @@
+import { Time, DateType, UniqueId } from "../shared-kernel";
+
 export interface Lecture {
-  id: string;
-  date: string | Date;
-  name: string;
-  teacher: string;
-  timeStart: string;
-  timeEnd: string;
+  id: UniqueId;
+  date: DateType;
+  timeStart: Time;
+  timeEnd: Time;
+  lectureName: string;
+  teacherName: string;
   classroom: number;
 }
+
+
+// Maybe inRange function

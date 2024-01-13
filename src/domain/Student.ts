@@ -1,9 +1,12 @@
+import { UniqueId } from "../shared-kernel";
+
 export interface Student {
-  id: string;
-  img: string;
-  name: string;
-  mail: string;
-  group: string;
-  phone: string;
-  educationForm: string;
+	id: UniqueId;
+	curatorId: UniqueId;
+	groupId: UniqueId,
+	accessLevel: unknown
+}
+
+export const isStudent = (accessLevel: unknown) => {
+	return accessLevel === 'student'
 }
