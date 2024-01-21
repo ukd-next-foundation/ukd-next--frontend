@@ -1,8 +1,8 @@
-import cls from './PaymentDetails.module.scss'
+import cls from "./PaymentDetails.module.scss";
 
-interface IPaymentDetails {}
+// interface IPaymentDetails {}
 
-const PaymentDetails = (props) => {
+const PaymentDetails = () => {
   return (
     <div className={cls.payment_container}>
       <header className={cls.payment_header}>
@@ -21,11 +21,13 @@ const PaymentDetails = (props) => {
           </li>
           <li className={cls.payment_item}>
             <h4>Номер рахунку</h4>
-            <p>46534653423121654281</p>
+            <p>46534653423121654281</p>D
           </li>
           <li className={cls.payment_item}>
             <h4>Призначення платежу</h4>
-            <p>Призначення коштів за договором №4655798454, ПДВ не оплачується</p>
+            <p>
+              Призначення коштів за договором №4655798454, ПДВ не оплачується
+            </p>
           </li>
           <li className={cls.payment_item}>
             <h4>БІК</h4>
@@ -50,7 +52,7 @@ const PaymentDetails = (props) => {
         </ul>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default PaymentDetails
+export default PaymentDetails;
