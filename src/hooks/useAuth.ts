@@ -4,30 +4,30 @@ import { useNavigate } from 'react-router'
 import { postDataWithAxios } from '../services/api'
 
 export function useAuth() {
-    const navigate = useNavigate()
-    //TODO: version of API to const
+  const navigate = useNavigate()
+  //TODO: version of API to const
 
-    const doAuth = useMutation({
-        mutationFn: (accessToken: string) =>
-            postDataWithAxios('/auth/by/google', {
-                accessToken,
-            }),
-        onSuccess: (data) => {
-            localStorage.setItem('access-token', data.accessToken)
-            navigate('/profile')
-        },
-        onError: (error) => {
-            /** TOAST, or any other alert about error logic */
-        },
-    })
+  const doAuth = useMutation({
+    mutationFn: (accessToken: string) =>
+      postDataWithAxios('/auth/by/google', {
+        accessToken,
+      }),
+    onSuccess: (data) => {
+      localStorage.setItem('access-token', data.accessToken)
+      navigate('/profile')
+    },
+    onError: () => {
+      /** TOAST, or any other alert about error logic */
+    },
+  })
 
-    const login = useGoogleLogin({
-        onSuccess: (codeResponse) => doAuth.mutate(codeResponse.access_token),
-    })
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => doAuth.mutate(codeResponse.access_token),
+  })
 
-    return {
-        login,
-    }
+  return {
+    login,
+  }
 }
 
 //TODO: Add types

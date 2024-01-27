@@ -26,7 +26,7 @@ axiosInstance.interceptors.response.use(
       return axiosInstance(originalRequest)
     }
 
-    window.location.href = '/auth'
+    // window.location.href = '/auth'
     return Promise.reject(error)
   },
 )
