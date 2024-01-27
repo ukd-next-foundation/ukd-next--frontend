@@ -1,6 +1,13 @@
+import { useQuery } from '@tanstack/react-query'
 import cls from './ProfilePage.module.scss'
+import { fetchDataWithAxios } from '../../services/api'
 
 const ProfilePage = () => {
+  const { data } = useQuery({
+    queryFn: () => fetchDataWithAxios('/users/me'),
+    queryKey: ['user'],
+  })
+
   return (
     <div className={cls.profile_container}>
       <header className={cls.profile_header}>
@@ -14,11 +21,11 @@ const ProfilePage = () => {
           <div className={cls.student_photo_container}>
             <img
               className="student_photo"
-              src="https://picsum.photos/100/100"
+              src={data?.pictureURL || 'https://picsum.photos/100/100'}
               alt="student photo"
             />
           </div>
-          <h2 className="student_name">Зубко Станіслав Романович</h2>
+          <h2 className="student_name">{data?.fullname || ''}</h2>
           <p className="learning_mode_text">Форма навчання: Деннa</p>
         </div>
       </header>
