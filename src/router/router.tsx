@@ -6,8 +6,8 @@ import SubjectsPage from '../pages/SubjectsPage/SubjectsPage'
 import NewsPage from '../pages/NewsPage/NewsPage'
 import GradebookPage from '../pages/GradebookPage/GradebookPage'
 import AuthPage from '../pages/AuthPage/AuthPage'
-import Home from "../pages/Home/Home.tsx";
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails.tsx";
+import Home from "../pages/Home/Home.tsx";
 
 export const router = createBrowserRouter([
   {
