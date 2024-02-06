@@ -5,9 +5,9 @@ import SchedulePage from '../pages/SchedulePage/SchedulePage'
 import SubjectsPage from '../pages/SubjectsPage/SubjectsPage'
 import NewsPage from '../pages/NewsPage/NewsPage'
 import GradebookPage from '../pages/GradebookPage/GradebookPage'
-import PaymentDetails from '../components/PaymentDetails/PaymentDetails'
 import AuthPage from '../pages/AuthPage/AuthPage'
 import Home from "../pages/Home/Home.tsx";
+import PaymentDetails from "../pages/PaymentDetails/PaymentDetails.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -50,8 +50,8 @@ export const router = createBrowserRouter([
           ]}
     ],
   },
-  {
-    path: '*',
-    element: <Navigate to="/auth" replace />,
-  },
+  // {
+  //   path: '*',
+  //   element: <Navigate to="/auth" replace />,
+  // },
 ])
