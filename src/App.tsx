@@ -1,9 +1,13 @@
-import { Outlet } from 'react-router'
+import { Outlet } from "react-router";
+import { ScrollRestoration } from "react-router-dom";
 
 const App = () => {
   return (
-        <Outlet/>
-  )
-}
+    <>
+      <ScrollRestoration />
+      <Outlet />
+    </>
+  );
+};
 
-export default App
+export default App;
