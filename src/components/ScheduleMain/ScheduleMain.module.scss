@@ -1,0 +1,10 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+.schedule_main {
+  padding-top: 25px;
+  @extend %flex-center;
+  justify-content: space-between;
+  gap: 25px;
+}
