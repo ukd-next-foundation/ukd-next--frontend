@@ -1,4 +1,4 @@
-import cls from "./avbar.module.scss";
+import cls from "./Navbar.module.scss";
 import { useLocation } from "react-router";
 import { NavLink } from "react-router-dom";
 
