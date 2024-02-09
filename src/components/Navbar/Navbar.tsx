@@ -10,7 +10,7 @@ function Navbar() {
       <ul className="menu">
         <li className={`${cls.menu_item} `}>
           <NavLink
-            to={"/profile"}
+            to={"profile"}
             className={({ isActive }) => (isActive ? cls.active : "")}
           >
             <svg
@@ -43,7 +43,7 @@ function Navbar() {
 
         <li className={cls.menu_item}>
           <NavLink
-            to={"/schedule"}
+            to={"schedule"}
             className={({ isActive }) => (isActive ? cls.active : "")}
           >
             <svg
@@ -76,7 +76,7 @@ function Navbar() {
 
         <li className={cls.menu_item}>
           <NavLink
-            to={"/subjects"}
+            to={"subjects"}
             className={({ isActive }) => (isActive ? cls.active : "")}
           >
             <svg
@@ -108,7 +108,7 @@ function Navbar() {
         </li>
         <li className={cls.menu_item}>
           <NavLink
-            to={"/news"}
+            to={"news"}
             className={({ isActive }) => (isActive ? cls.active : "")}
           >
             <svg
