@@ -1,8 +1,9 @@
-@import 'src/scss/inheritance';
-@import 'src/scss/mixin';
-@import 'src/scss/var';
+@import "src/scss/inheritance";
+@import "src/scss/mixin";
+@import "src/scss/var";
 
-.welcome, .welcome_text {
+.welcome,
+.welcome_text {
   @extend %flex-center;
   flex-direction: column;
   text-align: center;
@@ -19,7 +20,7 @@
     margin-top: 20px;
     font-size: 14px;
     line-height: 22px;
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
@@ -29,6 +30,7 @@
   position: absolute;
   bottom: 20px;
   padding: 17px;
+  max-width: 400px;
   width: 90%;
   background: $main;
   color: white;

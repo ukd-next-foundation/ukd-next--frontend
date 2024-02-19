@@ -1,0 +1,55 @@
+@import 'src/scss/var';
+@import 'src/scss/mixin';
+@import 'src/scss/inheritance';
+
+.step_container {
+  @extend %flex-center;
+  flex-direction: column;
+}
+
+.step {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: solid 2px $main;
+  @extend %flex-center;
+  align-items: flex-start;
+}
+
+.stick {
+  height: 105px;
+  width: 1.5px;
+  margin-top: 5px;
+  background: $main;
+}
+
+.step_active {
+  position: relative;
+  .step {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main;
+
+    &::before {
+      content: '';
+      width: 80%;
+      height: 80%;
+      margin-top: 2px;
+      background: $main;
+      border-radius: 50%;
+    }
+  }
+}
+
+.past {
+  .stick {
+    background: grey;
+  }
+  .step {
+    border: solid 2px grey;
+  }
+}
+
+.step_container .progress_stick {
+  background: linear-gradient(0deg, rgba(144, 22, 35, 1) 0%, rgba(126, 126, 126, 1) 60%);
+}

@@ -1,0 +1,76 @@
+@import 'src/scss/var';
+@import 'src/scss/mixin';
+@import 'src/scss/inheritance';
+
+.subject {
+  max-width: 300px;
+  padding: 11px 15px 6px 15px;
+  border-radius: 20px;
+  background: #f1f1f2;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+
+  &_details {
+    @extend %flex-center;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+}
+
+.subject_info {
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.details_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7px;
+}
+
+.subject_active {
+  background: $main;
+  box-shadow: 0 0 0 rgba($main, 0.4);
+  animation: pulse 2s infinite;
+  opacity: 1;
+  color: white;
+  small {
+    color: white;
+  }
+  h3 {
+    opacity: 1;
+  }
+}
+
+.subject_active ~ li h3 {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba($main, 0.4);
+    box-shadow: 0 0 0 0 rgba($main, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 11px rgba($main, 0);
+    box-shadow: 0 0 0 11px rgba($main, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba($main, 0);
+    box-shadow: 0 0 0 0 rgba($main, 0);
+  }
+}
+
+.past * {
+  color: grey;
+}

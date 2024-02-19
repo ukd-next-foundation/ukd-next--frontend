@@ -8,80 +8,19 @@
   gap: 5px;
   align-items: center;
   position: relative;
-
-  .step {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: solid 2px $main;
-    @extend %flex-center;
-    align-items: flex-start;
-  }
-
-  .step_container:last-child .stick {
-    display: none;
-  }
 }
 
-.step_container {
-  @extend %flex-center;
-  flex-direction: column;
+.steps li:last-child div[class*="stick"] {
+  display: none;
 }
 
-.steps li {
-  .step {
-    border: solid 2px #7e7e7e;
-  }
-
-  .stick {
-    margin-top: 5px;
-    background: #7e7e7e;
-  }
-}
-
-.steps .step_active {
-  position: relative;
-  .step {
-    width: 20px;
-    height: 20px;
-    border: 2px solid $main;
-    &::before {
-      content: "";
-      width: 80%;
-      height: 80%;
-      margin-top: 2px;
-      background: $main;
-      border-radius: 50%;
-    }
-  }
-
-  .stick {
-    background: $main !important;
-  }
-}
-
-.stick {
-  height: 105px;
-  width: 1.5px;
-  background: $main;
-}
-
-.step_active ~ li {
-  .stick {
-    background: $main;
-  }
-
-  .step {
-    border: solid 2px $main;
-  }
-}
-
-//Style for stick before .active
-
-.steps li:has(+ .step_active) .stick {
-  background: linear-gradient(
-    0deg,
-    rgba(144, 22, 35, 1) 0%,
-    rgba(126, 126, 126, 1) 60%
-  );
-}
+//.steps .finished {
+//  .step {
+//    border: solid 2px #7e7e7e;
+//  }
+//
+//  .stick {
+//    margin-top: 5px;
+//    background: #7e7e7e;
+//  }
+//}

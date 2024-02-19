@@ -1,6 +1,4 @@
-import cls from './PercentageCircle.module.scss'
-
-
+import cls from "./PercentageCircle.module.scss";
 
 //TODO: Check circle on other android phone
 const PercentageCircle = () => {
@@ -40,9 +38,7 @@ const PercentageCircle = () => {
         />
       </svg>
     </>
-  )
-}
+  );
+};
 
-export default PercentageCircle
-
-//https://www.figma.com/file/UdaXjuBhYTKJwz91sFP8l7/UKD-NEXT-(Copy)?type=design&t=cM7e1QAt5xYYxm8B-6
+export default PercentageCircle;

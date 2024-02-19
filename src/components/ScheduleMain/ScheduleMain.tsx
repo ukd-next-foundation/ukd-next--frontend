@@ -1,22 +1,38 @@
-import cls from "./ScheduleMain.module.scss";
-import Points from "../Points/Points.tsx";
-import ScheduleSubjects from "../ScheduleSubjects/ScheduleSubjects.tsx";
-import { useScheduleInterval } from "./hooks/useScheduleInterval.ts";
+import cls from './ScheduleMain.module.scss'
+import Points from '../Points/Points.tsx'
+import ScheduleSubjects from '../ScheduleSubjects/ScheduleSubjects.tsx'
+import { useLecturesInterval } from './hooks/useScheduleInterval.ts'
+import { getDayFrameFromToday } from '../../utils/moment.ts'
+import { Dispatch, SetStateAction } from 'react'
 
-function ScheduleMain() {
-  const { time } = useScheduleInterval();
-
-  console.log(time);
-
-  const pairs = [1, 2, 3, 4];
-  const activeId = 2;
+interface IScheduleMain {
+  lectures: any
+  currentDate: string
+  setCurrentDate: Dispatch<SetStateAction<string>>
+}
+function ScheduleMain({ lectures, currentDate, setCurrentDate }: IScheduleMain) {
+  const { prevLecture, currentLecture } = useLecturesInterval(lectures, setCurrentDate)
+  const dayFrame = getDayFrameFromToday(currentDate)
+  const isTodayFrame = dayFrame === 'current'
 
   return (
     <section className={cls.schedule_main}>
-      <Points pairs={pairs} activeId={activeId} />
-      <ScheduleSubjects pairs={pairs} activeId={activeId} />
+      <Points
+        isTodayFrame={isTodayFrame}
+        pairs={lectures}
+        activeId={currentLecture}
+        prevId={prevLecture}
+        dayFrame={dayFrame}
+      />
+      <ScheduleSubjects
+        isTodayFrame={isTodayFrame}
+        pairs={lectures}
+        activeId={currentLecture}
+        prevId={prevLecture}
+        dayFrame={dayFrame}
+      />
     </section>
-  );
+  )
 }
 
-export default ScheduleMain;
+export default ScheduleMain

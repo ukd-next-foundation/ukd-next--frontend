@@ -11,7 +11,7 @@ function ClipBoard({ children, value }: IClipBoard) {
   return (
     <div className={cls.clipboard}>
       {children}{" "}
-      <img onTouchStart={writeClipboardText} src="/copy.svg" alt="" />
+      <img onTouchStart={writeClipboardText} src="/icons/copy.svg" alt="" />
     </div>
   );
 }

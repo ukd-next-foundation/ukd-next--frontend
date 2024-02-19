@@ -1,27 +1,32 @@
-import cls from "./Points.module.scss";
+import cls from './Points.module.scss'
+import Point from './Point.tsx'
+import { Lecture } from '../../domain/Lecture.ts'
 
 interface IPoints {
-  pairs: number[];
-  activeId: number;
+  pairs: Lecture[]
+  activeId: number
+  prevId: number
+  dayFrame: string
+  isTodayFrame: boolean
 }
 
-function Points({ pairs, activeId }: IPoints) {
+function Points({ pairs, activeId, prevId, dayFrame, isTodayFrame }: IPoints) {
   return (
     <section className={cls.steps_container}>
       <ul className={cls.steps}>
-        {pairs.map((_, index) => (
-          <li
-            className={`${cls.step_container}  ${
-              activeId === index + 1 && cls.step_active
-            }`}
-          >
-            <div className={`${cls.step}`}></div>
-            <div className={cls.stick}></div>
-          </li>
+        {pairs.map((pair, index) => (
+          <Point
+            index={index}
+            key={pair.id}
+            isToday={isTodayFrame}
+            activeId={activeId}
+            prevId={prevId}
+            dayFrame={dayFrame}
+          />
         ))}
       </ul>
     </section>
-  );
+  )
 }
 
-export default Points;
+export default Points
