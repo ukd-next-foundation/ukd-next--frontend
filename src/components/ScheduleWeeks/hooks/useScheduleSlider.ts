@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const DATE_WIDTH = 47;
+const DATE_WIDTH = 48;
 export function useScheduleSlider(
   currentDate: string,
   weeks: { date: string }[],

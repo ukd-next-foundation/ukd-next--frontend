@@ -9,21 +9,27 @@
   @extend %flex-center;
   padding: 5px;
   svg {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
     cursor: pointer;
+    fill: #666666;
   }
 }
 
-.active {
+.menu_item .active {
   background: $main;
-  svg path {
+  svg {
     fill: white;
   }
 }
 
 .nav {
-  border-top: 1.5px solid #CDCDCD;
-  border-radius: 17px 17px 46px 46px;
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  width: calc(100vw - 30px);
+  max-width: 430px;
+  border-top: 1.5px solid #cdcdcd;
+  border-radius: 17px 17px 0px 0px;
   padding: 10px 18px;
 }

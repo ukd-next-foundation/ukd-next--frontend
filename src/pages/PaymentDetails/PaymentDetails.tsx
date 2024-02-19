@@ -1,14 +1,13 @@
-import cls from "./PaymentDetails.module.scss";
-import ClipBoard from "../../components/ClipBoard/ClipBoard.tsx";
-import {Link} from "react-router-dom";
-// interface IPaymentDetails {}
+import cls from './PaymentDetails.module.scss'
+import ClipBoard from '../../components/ClipBoard/ClipBoard.tsx'
+import { Link } from 'react-router-dom'
 
 const PaymentDetails = () => {
   return (
     <div className={cls.payment_container}>
       <header className={cls.payment_header}>
         <Link to={'/home/profile'}>
-          <img src="/arrow_back.svg" alt="" />
+          <img src="/icons/arrow_back.svg" alt="" />
         </Link>
         <h1>Реквізити</h1>
       </header>
@@ -24,9 +23,7 @@ const PaymentDetails = () => {
           </li>
           <li className={cls.payment_item}>
             <h4>Призначення платежу</h4>
-            <p>
-              Призначення коштів за договором №4655798454, ПДВ не оплачується
-            </p>
+            <p>Призначення коштів за договором №4655798454, ПДВ не оплачується</p>
           </li>
           <li className={cls.payment_item}>
             <h4>ІПН при необхідності</h4>
@@ -38,32 +35,32 @@ const PaymentDetails = () => {
           </li>
           <li className={cls.payment_item}>
             <h4>Номер договору</h4>
-            <ClipBoard value={"4655798454"}>
+            <ClipBoard value={'4655798454'}>
               <p>4655798454</p>
             </ClipBoard>
           </li>
           <li className={cls.payment_item}>
             <h4>Номер рахунку</h4>
-            <ClipBoard value={"46534653423121654281"}>
+            <ClipBoard value={'46534653423121654281'}>
               <p>46534653423121654281</p>
             </ClipBoard>
           </li>
           <li className={cls.payment_item}>
             <h4>БІК</h4>
-            <ClipBoard value={"044532154"}>
+            <ClipBoard value={'044532154'}>
               <p>044532154</p>
             </ClipBoard>
           </li>
           <li className={cls.payment_item}>
             <h4>Кор. рахунок</h4>
-            <ClipBoard value={"301054651265546531"}>
+            <ClipBoard value={'301054651265546531'}>
               <p>301054651265546531</p>
             </ClipBoard>
           </li>
         </ul>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default PaymentDetails;
+export default PaymentDetails

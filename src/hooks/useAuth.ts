@@ -5,17 +5,19 @@ import { postDataWithAxios } from '../services/api'
 
 export function useAuth() {
   const navigate = useNavigate()
-  //TODO: version of API to const
 
   const doAuth = useMutation({
-    mutationFn: (accessToken: string) =>
-      postDataWithAxios('/auth/by/google', {
+    mutationFn: (accessToken: string) => {
+      return postDataWithAxios('/auth/by/google', {
         accessToken,
-      }),
+      })
+    },
+
     onSuccess: (data) => {
       localStorage.setItem('access-token', data.accessToken)
-      navigate('/profile')
+      navigate('/home/profile')
     },
+
     onError: () => {
       /** TOAST, or any other alert about error logic */
     },

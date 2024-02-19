@@ -59,7 +59,7 @@ function GradebookPage() {
         <div className={cls.subject_marks}>
           <div className={cls.marks_header}>
             <p>Журнал оцінок</p>
-            <img src="/info.svg" alt="" />
+            <img src="/icons/info.svg" alt="" />
           </div>
           <ul className={cls.marks_list}>
             <li className={cls.mark_item}>

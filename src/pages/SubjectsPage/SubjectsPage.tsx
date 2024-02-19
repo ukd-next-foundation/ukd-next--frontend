@@ -9,24 +9,24 @@ const SubjectsPage = () => {
           <h4>Загально Освітні предмети</h4>
           <ul className="subject_list">
             <li className={cls.subject_item}>
-              <img src="/collections_bookmark.svg" alt="Book" />
+              <img src="/icons/collections_bookmark.svg" alt="Book" />
               <div className={cls.subject_info}>
                 <p>Математика</p>
-                <img src="/next_arrow.svg" alt="Go subject arrow" />
+                <img src="/icons/next_arrow.svg" alt="Go subject arrow" />
               </div>
             </li>
             <li className={cls.subject_item}>
-              <img src="/collections_bookmark.svg" alt="Book" />
+              <img src="/icons/collections_bookmark.svg" alt="Book" />
               <div className={cls.subject_info}>
                 <p>Математика</p>
-                <img src="/next_arrow.svg" alt="Go subject arrow" />
+                <img src="/icons/next_arrow.svg" alt="Go subject arrow" />
               </div>
             </li>
             <li className={cls.subject_item}>
-              <img src="/collections_bookmark.svg" alt="Book" />
+              <img src="/icons/collections_bookmark.svg" alt="Book" />
               <div className={cls.subject_info}>
                 <p>Математика</p>
-                <img src="/next_arrow.svg" alt="Go subject arrow" />
+                <img src="/icons/next_arrow.svg" alt="Go subject arrow" />
               </div>
             </li>
           </ul>
@@ -35,24 +35,24 @@ const SubjectsPage = () => {
           <h4>Профільні предмети</h4>
           <ul className="subject_list">
             <li className={cls.subject_item}>
-              <img src="/collections_bookmark.svg" alt="Book" />
+              <img src="/icons/collections_bookmark.svg" alt="Book" />
               <div className={cls.subject_info}>
                 <p>Математика</p>
-                <img src="/next_arrow.svg" alt="Go subject arrow" />
+                <img src="/icons/next_arrow.svg" alt="Go subject arrow" />
               </div>
             </li>
             <li className={cls.subject_item}>
-              <img src="/collections_bookmark.svg" alt="Book" />
+              <img src="/icons/collections_bookmark.svg" alt="Book" />
               <div className={cls.subject_info}>
                 <p>Математика</p>
-                <img src="/next_arrow.svg" alt="Go subject arrow" />
+                <img src="/icons/next_arrow.svg" alt="Go subject arrow" />
               </div>
             </li>
             <li className={cls.subject_item}>
-              <img src="/collections_bookmark.svg" alt="Book" />
+              <img src="/icons/collections_bookmark.svg" alt="Book" />
               <div className={cls.subject_info}>
                 <p>Математика</p>
-                <img src="/next_arrow.svg" alt="Go subject arrow" />
+                <img src="/icons/next_arrow.svg" alt="Go subject arrow" />
               </div>
             </li>
           </ul>
