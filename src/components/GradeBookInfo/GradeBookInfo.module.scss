@@ -1,0 +1,38 @@
+@import 'src/scss/var';
+@import 'src/scss/mixin';
+@import 'src/scss/inheritance';
+
+.info_container {
+  position: relative;
+}
+
+.info {
+  width: 120px;
+  height: 105px;
+  border-radius: 15px 3px 15px 15px;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @extend %flex-center;
+  justify-content: flex-start;
+  padding-left: 15px;
+  position: absolute;
+  right: 0;
+}
+
+.info_item {
+  display: flex;
+  align-items: center;
+  p,
+  span {
+    font-weight: 400;
+    color: black;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}
+
+.info_list {
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+}

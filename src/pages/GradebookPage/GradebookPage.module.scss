@@ -3,7 +3,6 @@
 @import 'src/scss/inheritance';
 
 .grade,
-.grade_info,
 .attendance_summary,
 .mark_category,
 .marks_header {
@@ -27,18 +26,6 @@
   font-weight: 600;
 }
 
-.grade {
-  position: absolute;
-  flex-direction: column;
-  p {
-    font-size: 31px;
-  }
-  small {
-    color: #807c7c;
-    margin-top: 4px;
-  }
-}
-
 .attendance_info {
   gap: 8px;
   p {
@@ -50,13 +37,6 @@
   margin-top: 8px;
   justify-content: space-around;
   width: 100%;
-}
-
-.marker_circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: $main;
 }
 
 .summary_item {
@@ -80,43 +60,6 @@
   justify-content: space-around;
 }
 
-.mark_item,
-.mark_info {
-  display: flex;
-  align-items: center;
-}
-
-.mark_item {
-  margin-top: 12px;
-  gap: 20px;
-}
-
-.mark_info {
-  width: 100%;
-  margin-top: 8px;
-  justify-content: space-between;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(#dedcdc, 0.3);
-}
-
-.mark_category {
-  width: 24px;
-  padding: 0px 3px;
-  border-radius: 6px;
-  border-top: 6px solid #a42638;
-  color: #a42638;
-  background: #ebebeb;
-  p {
-    font-size: 17px;
-    font-weight: 400;
-  }
-}
-
-.mark_value {
-  font-weight: 400;
-  font-size: 18px;
-}
-
 .marks_header {
   justify-content: space-between;
   img {
@@ -130,10 +73,6 @@
   }
 }
 
-.mark_date {
-  font-size: 17px;
-}
-
 .subject_marks,
 .marks_list,
 .attendance_stats,
@@ -142,3 +81,10 @@
   margin-top: 30px;
 }
 
+.subject_main {
+  padding: 15px;
+}
+
+.subject_details {
+  overflow-x: hidden;
+}

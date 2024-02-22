@@ -1,0 +1,44 @@
+import cls from './GradeBookHeader.module.scss'
+import PercentageCircle from '../PercentageCircle/PercentageCircle.tsx'
+import { motion } from 'framer-motion'
+import { useFramerScroll } from './hooks/useFramerScroll.ts'
+
+function GradeBookHeader() {
+  const { circle, flex } = useFramerScroll()
+
+  return (
+    <div className={cls.subject_performance} style={{ flexDirection: flex }}>
+      <div ref={circle} className="grade_summary">
+        <PercentageCircle />
+      </div>
+      <ul
+        className={cls.attendance_stats}
+        style={{
+          justifyContent: flex === 'column' ? 'space-between' : 'center',
+          flexDirection: flex === 'row' ? 'column' : 'row',
+        }}
+      >
+        <motion.li layout={'position'} className={cls.attendance_item}>
+          <div className={cls.attendance_info}>
+            <div className={cls.marker_circle} />
+            <p className="attendance_label">Відвідано</p>
+          </div>
+        </motion.li>
+        <motion.li layout={'position'} className={cls.attendance_item}>
+          <div className={cls.attendance_info}>
+            <div className={cls.marker_circle} />
+            <p className="attendance_label">Пропущено</p>
+          </div>
+        </motion.li>
+        <motion.li layout={'position'} className={cls.attendance_item}>
+          <div className={cls.attendance_info}>
+            <div className={cls.marker_circle} />
+            <p className="attendance_label">Відпрацьовано</p>
+          </div>
+        </motion.li>
+      </ul>
+    </div>
+  )
+}
+
+export default GradeBookHeader
