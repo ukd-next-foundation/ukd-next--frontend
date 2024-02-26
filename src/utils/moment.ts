@@ -3,6 +3,7 @@ moment.locale('uk')
 
 const FORMAT = 'YYYY-MM-DD'
 const SCHEDULE_FORMAT = 'MMMM, D, YYYY'
+const SUBJECT_FORMAT = 'DD MMM. YYYY'
 export const getDate = (date?: string) => {
   return moment(date).format(FORMAT)
 }
@@ -60,3 +61,5 @@ export const getDayFrameFromToday = (date: string) => {
   const dayIndex = moment(0, 'HH').diff(date, 'days')
   return dayIndex === 0 ? 'current' : dayIndex < 0 ? 'future' : 'past'
 }
+
+export const getSubjectDate = (date: string) => moment(date).format(SUBJECT_FORMAT)

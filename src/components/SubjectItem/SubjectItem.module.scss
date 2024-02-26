@@ -1,0 +1,74 @@
+@import 'src/scss/var';
+@import 'src/scss/mixin';
+@import 'src/scss/inheritance';
+
+.mark_category,
+.marks_header {
+  @extend %flex-center;
+}
+
+.mark_item,
+.mark_info {
+  display: flex;
+  align-items: center;
+}
+
+.mark_item {
+  margin-top: 12px;
+  gap: 20px;
+}
+
+.mark_info {
+  width: 100%;
+  margin-top: 8px;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(#dedcdc, 0.3);
+}
+
+.mark_category {
+  width: 24px;
+  padding: 0px 3px;
+  border-radius: 6px;
+  border-top: 6px solid #a42638;
+  color: #a42638;
+  background: #ebebeb;
+  p {
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+
+.mark_value {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.marks_header {
+  justify-content: space-between;
+  img {
+    position: relative;
+    left: 5px;
+    width: 22px;
+  }
+  p {
+    color: rgba(64, 64, 64, 0.87);
+    font-size: 15px;
+  }
+}
+
+.mark_date {
+  font-size: 17px;
+}
+
+.skiped {
+  .mark_category {
+    opacity: 0.5;
+    border-top: 6px solid grey;
+    color: grey;
+  }
+  .mark_value {
+    color: grey;
+    opacity: 0.7;
+  }
+}

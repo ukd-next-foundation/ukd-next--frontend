@@ -2,14 +2,11 @@
 @import 'src/scss/mixin';
 @import 'src/scss/var';
 
-.circular_chart {
-  display: block;
-  max-width: 80%;
-  max-height: 200px;
-}
 .that_circle {
   fill: none;
-  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  border-radius: 20px;
   animation: progress 0.7s ease-out forwards;
   box-shadow: 0 8px 25px 0 #e5e5e5;
 }
@@ -32,10 +29,48 @@
 .percentage_done {
   fill: #9b9b9b;
   font-size: 0.2em;
-  font-family: AvenirNext;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 0.1px;
+}
+
+.second path {
+  max-width: 60% !important;
+  max-height: 200px !important;
+}
+
+.grade {
+  position: absolute;
+  flex-direction: column;
+  p {
+    font-size: 36px;
+  }
+  small {
+    color: #807c7c;
+    margin-top: 4px;
+  }
+}
+
+.grade_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 180px;
+}
+
+svg {
+  position: absolute;
 }

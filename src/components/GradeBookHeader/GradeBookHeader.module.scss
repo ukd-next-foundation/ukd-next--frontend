@@ -1,0 +1,59 @@
+@import 'src/scss/var';
+@import 'src/scss/mixin';
+@import 'src/scss/inheritance';
+
+.grade_info {
+  @extend %flex-center;
+}
+
+.subject_performance {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.attendance_stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.attendance_info {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 6px;
+  p {
+    margin-top: 2px;
+    font-size: 14px;
+  }
+}
+
+.marker_circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: $main;
+}
+
+.attendance_item {
+  margin-top: 8px;
+  display: flex;
+}
+
+.attendance_stats li:nth-child(1) {
+  .marker_circle {
+    background: $main;
+  }
+}
+
+.attendance_stats li:nth-child(2) {
+  .marker_circle {
+    background: #f3ae5c;
+  }
+}
+
+.attendance_stats li:nth-child(3) {
+  .marker_circle {
+    background: #439d48;
+  }
+}
