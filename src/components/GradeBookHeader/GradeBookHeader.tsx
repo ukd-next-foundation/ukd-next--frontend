@@ -3,12 +3,13 @@ import PercentageCircle from '../PercentageCircle/PercentageCircle.tsx'
 import { motion } from 'framer-motion'
 import { useFramerScroll } from './hooks/useFramerScroll.ts'
 
+const labels = ['Відвідано', 'Пропущено', 'Відпрацьовано']
 function GradeBookHeader() {
   const { circle, flex } = useFramerScroll()
 
   return (
     <div className={cls.subject_performance} style={{ flexDirection: flex }}>
-      <div ref={circle} className="grade_summary">
+      <div ref={circle}>
         <PercentageCircle />
       </div>
       <ul
@@ -18,24 +19,18 @@ function GradeBookHeader() {
           flexDirection: flex === 'row' ? 'column' : 'row',
         }}
       >
-        <motion.li layout={'position'} className={cls.attendance_item}>
-          <div className={cls.attendance_info}>
-            <div className={cls.marker_circle} />
-            <p className="attendance_label">Відвідано</p>
-          </div>
-        </motion.li>
-        <motion.li layout={'position'} className={cls.attendance_item}>
-          <div className={cls.attendance_info}>
-            <div className={cls.marker_circle} />
-            <p className="attendance_label">Пропущено</p>
-          </div>
-        </motion.li>
-        <motion.li layout={'position'} className={cls.attendance_item}>
-          <div className={cls.attendance_info}>
-            <div className={cls.marker_circle} />
-            <p className="attendance_label">Відпрацьовано</p>
-          </div>
-        </motion.li>
+        {labels.map((el, index) => (
+          <motion.li
+            key={132 + index}
+            layout={'position'}
+            className={cls.attendance_item}
+          >
+            <div className={cls.attendance_info}>
+              <div className={cls.marker_circle} />
+              <p className="attendance_label">{el}</p>
+            </div>
+          </motion.li>
+        ))}
       </ul>
     </div>
   )

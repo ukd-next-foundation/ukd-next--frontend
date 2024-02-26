@@ -3,8 +3,8 @@ import { useRef, useState } from 'react'
 
 export function useFramerScroll() {
   const { scrollYProgress } = useScroll()
-  const [flex, setFlex] = useState('column')
-  const circle = useRef<HTMLDivElement>()
+  const [flex, setFlex] = useState<'column' | 'row'>('column')
+  const circle = useRef<HTMLDivElement>(null)
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     if (latest < 0.15) {
