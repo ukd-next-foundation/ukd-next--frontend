@@ -8,7 +8,6 @@ import GradebookPage from '../pages/GradebookPage/GradebookPage'
 import AuthPage from '../pages/AuthPage/AuthPage'
 import PaymentDetails from "../pages/PaymentDetails/PaymentDetails.tsx";
 import Home from "../pages/Home/Home.tsx";
-import PaymentDetails from "../pages/PaymentDetails/PaymentDetails.tsx";
 
 export const router = createBrowserRouter([
   {
