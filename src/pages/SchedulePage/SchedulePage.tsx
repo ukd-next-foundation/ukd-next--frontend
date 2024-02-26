@@ -6,20 +6,24 @@ import { getDate } from '../../utils/moment.ts'
 import { useState } from 'react'
 import { useLectures } from './hooks/useLectures.ts'
 import { mockData } from './mock'
+import Skeleton from '../../components/Skeleton/Skeleton.tsx'
+import ScheduleSkeleton from '../../components/ScheduleSkeleton/ScheduleSkeleton.tsx'
 
 function SchedulePage() {
   const [currentDate, setCurrentDate] = useState(() => getDate())
-  const { data = mockData } = useLectures(currentDate)
+  const { data = mockData, isLoading } = useLectures(currentDate)
 
   return (
     <div className={cls.schedule}>
       <ScheduleHeader currentDate={currentDate} setCurrentDate={setCurrentDate} />
       <ScheduleWeeks currentDate={currentDate} setCurrentDate={setCurrentDate} />
-      <ScheduleMain
-        currentDate={currentDate}
-        setCurrentDate={setCurrentDate}
-        lectures={data}
-      />
+      <ScheduleSkeleton isLoading={isLoading}>
+        <ScheduleMain
+          currentDate={currentDate}
+          setCurrentDate={setCurrentDate}
+          lectures={data}
+        />
+      </ScheduleSkeleton>
     </div>
   )
 }
