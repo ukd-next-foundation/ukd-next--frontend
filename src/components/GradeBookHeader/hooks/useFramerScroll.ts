@@ -8,11 +8,12 @@ export function useFramerScroll() {
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     if (latest < 0.15) {
-      circle.current!.style.scale = `${1 - latest * 1.5}`
+      circle.current!.style.scale = `min(1, ${1 - latest * 1.5})`
       flex === 'row' && setFlex('column')
     }
 
     if (latest > 0.15 && latest !== 1) {
+      circle.current!.style.scale = '.8'
       setFlex('row')
     }
   })
