@@ -3,20 +3,21 @@
 @import 'src/scss/inheritance';
 
 .schedule_skeleton {
-  padding-top: 20px;
-  @extend %flex-center;
-  gap: 20px;
+  padding-top: 25px;
+  display: flex;
+  gap: 25px;
 }
 
 .skeleton_card {
-  width: 280px;
-  padding: 18px 13px;
-  height: 75px;
+  width: 100%;
+  max-width: 300px;
+  padding: 11px 15px 6px 15px;
+  height: 90px;
   border-radius: 20px;
   background: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   box-shadow:
     rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 5px;
@@ -30,5 +31,6 @@
 .cards {
   display: flex;
   flex-direction: column;
+  width: 80%;
   gap: 20px;
 }

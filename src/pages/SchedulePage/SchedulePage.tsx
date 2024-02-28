@@ -6,7 +6,6 @@ import { getDate } from '../../utils/moment.ts'
 import { useState } from 'react'
 import { useLectures } from './hooks/useLectures.ts'
 import { mockData } from './mock'
-import Skeleton from '../../components/Skeleton/Skeleton.tsx'
 import ScheduleSkeleton from '../../components/ScheduleSkeleton/ScheduleSkeleton.tsx'
 
 function SchedulePage() {

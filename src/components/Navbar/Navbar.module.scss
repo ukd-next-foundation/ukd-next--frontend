@@ -1,6 +1,6 @@
-@import "src/scss/var";
-@import "src/scss/mixin";
-@import "src/scss/inheritance";
+@import 'src/scss/var';
+@import 'src/scss/mixin';
+@import 'src/scss/inheritance';
 
 .menu_item a {
   width: 46px;
@@ -25,7 +25,7 @@
 
 .nav {
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   background: #ffffff;
   width: calc(100vw - 30px);
   max-width: 430px;

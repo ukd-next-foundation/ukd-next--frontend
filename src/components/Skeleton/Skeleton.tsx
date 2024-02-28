@@ -1,7 +1,22 @@
 import cls from './Skeleton.module.scss'
-import { useId } from 'react'
+import { ReactNode, useId } from 'react'
 
-function Skeleton(props) {
+interface ISkeleton {
+  gap?: number
+  height: number | string
+  width: number | string
+  bgColor?: string
+  show?: boolean
+  fillDeep?: number
+  fillColor?: string
+  count?: number
+  radius?: number | string
+  nested?: ReactNode
+  children?: ReactNode
+  opacity2?: number
+}
+
+function Skeleton(props: ISkeleton) {
   const { gap = 10, height = 30, width = 200, bgColor, show = true } = props
   const id = useId()
 

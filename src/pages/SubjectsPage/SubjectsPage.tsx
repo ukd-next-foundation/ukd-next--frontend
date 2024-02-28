@@ -9,8 +9,8 @@ const SubjectsPage = () => {
         <div className={cls.general_subjects}>
           <h4>Загально Освітні предмети</h4>
           <ul className="subject_list">
-            {[1, 2, 3].map((subject) => (
-              <Link to={'/home/subject'}>
+            {[1, 2, 3].map((el) => (
+              <Link key={el + 132} to={'/home/subject'}>
                 <li className={cls.subject_item}>
                   <img src="/icons/collections_bookmark.svg" alt="Book" />
                   <div className={cls.subject_info}>
@@ -25,8 +25,8 @@ const SubjectsPage = () => {
         <div className={cls.specialized_subjects}>
           <h4>Профільні предмети</h4>
           <ul className="subject_list">
-            {[1, 2, 3].map((subject) => (
-              <Link to={'/home/subject'}>
+            {[1, 2, 3].map((el) => (
+              <Link key={el + 232} to={'/home/subject'}>
                 <li className={cls.subject_item}>
                   <img src="/icons/collections_bookmark.svg" alt="Book" />
                   <div className={cls.subject_info}>
