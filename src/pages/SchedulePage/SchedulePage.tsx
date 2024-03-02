@@ -2,14 +2,14 @@ import cls from './SchedulePage.module.scss'
 import ScheduleHeader from '../../components/ScheduleHeader/ScheduleHeader.tsx'
 import ScheduleWeeks from '../../components/ScheduleWeeks/ScheduleWeeks.tsx'
 import ScheduleMain from '../../components/ScheduleMain/ScheduleMain.tsx'
-import { getDate } from '../../utils/moment.ts'
+import {getDate, getTodayOrMonday} from '../../utils/moment.ts'
 import { useState } from 'react'
 import { useLectures } from './hooks/useLectures.ts'
 import { mockData } from './mock'
 import ScheduleSkeleton from '../../components/ScheduleSkeleton/ScheduleSkeleton.tsx'
 
 function SchedulePage() {
-  const [currentDate, setCurrentDate] = useState(() => getDate())
+  const [currentDate, setCurrentDate] = useState(() => getTodayOrMonday())
   const { data = mockData, isLoading } = useLectures(currentDate)
 
   return (

@@ -63,3 +63,10 @@ export const getDayFrameFromToday = (date: string) => {
 }
 
 export const getSubjectDate = (date: string) => moment(date).format(SUBJECT_FORMAT)
+
+export const getTodayOrMonday = () => {
+  const dayOfWeek = moment().day()
+  const isWeekend = dayOfWeek === 6 || dayOfWeek === 0
+
+  return isWeekend ? moment().startOf('isoWeek').add(1, 'week').format(FORMAT) : getDate()
+}

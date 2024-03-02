@@ -1,5 +1,5 @@
 import cls from './ScheduleHeader.module.scss'
-import { today } from '../../utils/moment.ts'
+import {getTodayOrMonday, today} from '../../utils/moment.ts'
 import { Dispatch, SetStateAction } from 'react'
 import ScheduleHeaderInfo from '../ScheduleHeaderInfo/ScheduleHeaderInfo.tsx'
 
@@ -16,7 +16,7 @@ function ScheduleHeader({ currentDate, setCurrentDate }: IScheduleHeader) {
           <button className={cls.notification_button}>
             <img src="/icons/notification.svg" alt="" />
           </button>
-          <button className={cls.today_button} onClick={() => setCurrentDate(today())}>
+          <button className={cls.today_button} onClick={() => setCurrentDate(getTodayOrMonday())}>
             <img src="/icons/return.svg" alt="" />
           </button>
         </div>
