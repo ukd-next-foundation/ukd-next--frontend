@@ -1,7 +1,7 @@
 export const mockData = [
   {
     id: 10,
-    date: "2024-02-15",
+    date: "2024-03-04",
     startAt: "8:30:00",
     endAt: "9:30:00",
     type: "LECTURE",
@@ -29,7 +29,7 @@ export const mockData = [
   },
   {
     id: 11,
-    date: "2024-02-15",
+    date: "2024-03-04",
     startAt: "13:00:00",
     endAt: "15:30:00",
     type: "LECTURE",
@@ -57,7 +57,7 @@ export const mockData = [
   },
   {
     id: 12,
-    date: "2024-02-15",
+    date: "2024-03-04",
     startAt: "15:40:00",
     endAt: "16:30:00",
     type: "LECTURE",
