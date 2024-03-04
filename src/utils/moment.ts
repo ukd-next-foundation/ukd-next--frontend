@@ -54,7 +54,7 @@ export const isNowBetween = (
 }
 
 export const isTimeBefore = (timeBefore: string, currentTime?: string) => {
-  return moment(moment(timeBefore, 'HH:mm')).isBefore(moment(currentTime, 'HH:mm'))
+  return moment(moment(timeBefore, 'HH:mm:ss')).isBefore(moment(currentTime, 'HH:mm:ss'))
 }
 
 export const getDayFrameFromToday = (date: string) => {
