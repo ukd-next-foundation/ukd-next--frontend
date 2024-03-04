@@ -1,5 +1,5 @@
 import cls from './ScheduleHeader.module.scss'
-import {getTodayOrMonday, today} from '../../utils/moment.ts'
+import {getTodayOrMonday} from '../../utils/moment.ts'
 import { Dispatch, SetStateAction } from 'react'
 import ScheduleHeaderInfo from '../ScheduleHeaderInfo/ScheduleHeaderInfo.tsx'
 
