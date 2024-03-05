@@ -1,11 +1,19 @@
 import { Outlet } from 'react-router'
-import { ScrollRestoration } from 'react-router-dom'
+import { Navigate, ScrollRestoration } from 'react-router-dom'
+
+let token
+
+if (typeof window !== 'undefined') {
+  token = localStorage.getItem('access-token')
+}
 
 const App = () => {
+  console.log()
   return (
     <>
       <ScrollRestoration />
       <Outlet />
+      {token! ? <Navigate to={'/home/profile'} /> : <Navigate to={'/auth'} />}
     </>
   )
 }
