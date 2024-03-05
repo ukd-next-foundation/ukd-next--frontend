@@ -2,14 +2,14 @@ import { useQuery } from '@tanstack/react-query'
 import cls from './ProfilePage.module.scss'
 import { fetchDataWithAxios } from '../../services/api'
 import ProfileSection from '../../components/ProfileSection/ProfileSection.tsx'
-import { curator, other, user } from './mock'
+import { curator, other, setProfileUserData, user } from './mock'
 
 const ProfilePage = () => {
   const { data } = useQuery({
-    queryFn: () => fetchDataWithAxios('/users/me'),
+    queryFn: () => fetchDataWithAxios('/users/profile'),
     queryKey: ['user'],
   })
-
+  console.log(data)
   return (
     <div className={cls.profile_container}>
       <header className={cls.profile_header}>
@@ -32,7 +32,7 @@ const ProfilePage = () => {
         </div>
       </header>
       <main className={cls.student_details}>
-        <ProfileSection items={user} />
+        <ProfileSection items={setProfileUserData(data)} />
         <ProfileSection title={'Контактні дані куратора '} items={curator} />
         <ProfileSection title={'Інше'} items={other} />
       </main>
