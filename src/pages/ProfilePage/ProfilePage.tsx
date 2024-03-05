@@ -1,15 +1,18 @@
 import { useQuery } from '@tanstack/react-query'
 import cls from './ProfilePage.module.scss'
 import { fetchDataWithAxios } from '../../services/api'
-import ProfileSection from '../../components/ProfileSection/ProfileSection.tsx'
-import { curator, other, setProfileUserData, user } from './mock'
+
+import ProfileItem from '../../components/ProfileItem/ProfileItem.tsx'
+
+//TODO: Remove Profile Section
+//TODO: Split on ProfileHeader / ProfileBody
 
 const ProfilePage = () => {
   const { data } = useQuery({
     queryFn: () => fetchDataWithAxios('/users/profile'),
     queryKey: ['user'],
   })
-  console.log(data)
+
   return (
     <div className={cls.profile_container}>
       <header className={cls.profile_header}>
@@ -32,9 +35,32 @@ const ProfilePage = () => {
         </div>
       </header>
       <main className={cls.student_details}>
-        <ProfileSection items={setProfileUserData(data)} />
-        <ProfileSection title={'Контактні дані куратора '} items={curator} />
-        <ProfileSection title={'Інше'} items={other} />
+        <section className="personal_info">
+          <div className="info_group">
+            <ProfileItem value={data?.email} icon={'/mail.svg'} copy={data?.email} />
+            <ProfileItem value={data?.group?.name} icon={'/group.svg'} />
+            <ProfileItem value={'095 125 125'} icon={'/call.svg'} />
+          </div>
+        </section>
+        <section className="personal_info">
+          <h4>Контактні данні куратора</h4>
+          <div className="info_group">
+            <ProfileItem value={data?.email} icon={'/mail.svg'} copy={data?.email} />
+            <ProfileItem value={data?.group?.elder?.fullname} icon={'/vashyshak.svg'} />
+            <ProfileItem value={'095 125 125'} icon={'/call.svg'} copy={'095 125 125'} />
+          </div>
+        </section>
+        <section className="personal_info">
+          <h4>Корисна інформація</h4>
+          <div className="info_group">
+            <ProfileItem
+              value={'Реквізити на оплату'}
+              icon={'/checkbook.svg'}
+              link={'/home/payment'}
+            />
+            <ProfileItem value={'Корисна інформація'} icon={'/info3.svg'} link={'#'} />
+          </div>
+        </section>
       </main>
     </div>
   )
