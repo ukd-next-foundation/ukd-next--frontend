@@ -1,18 +1,19 @@
-import { Outlet, useNavigate } from 'react-router'
-import { ScrollRestoration } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Outlet } from 'react-router'
+import { Navigate, ScrollRestoration } from 'react-router-dom'
+
+let token
+
+if (typeof window !== 'undefined') {
+  token = localStorage.getItem('access-token')
+}
 
 const App = () => {
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    navigate('/home/profile')
-  }, [])
-
+  console.log()
   return (
     <>
       <ScrollRestoration />
       <Outlet />
+      {token! ? <Navigate to={'/home/profile'} /> : <Navigate to={'/auth'} />}
     </>
   )
 }
