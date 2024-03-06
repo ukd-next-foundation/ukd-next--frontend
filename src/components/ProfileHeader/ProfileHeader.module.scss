@@ -1,0 +1,63 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+.profile_header,
+.student_info_container,
+.profile_navigation,
+.student_photo_container {
+  @extend %flex-center;
+  flex-direction: column;
+}
+
+.profile_header {
+  padding: 0 15px;
+}
+
+.profile_header {
+  padding-top: 10px;
+  padding-bottom: 28px;
+  border-radius: 0px 0px 26px 26px;
+  background: $main;
+  color: white;
+}
+
+.profile_navigation {
+  width: 100%;
+  position: relative;
+  flex-direction: row;
+}
+
+.profile_title {
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.settings_container {
+  position: absolute;
+  right: 0;
+  text-align: end;
+}
+
+.student_photo_container {
+  margin: 18px 0px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: $grey-1; //TODO: Put this to _var
+  img {
+    border-radius: 50%;
+  }
+}
+
+.student_info_container {
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+

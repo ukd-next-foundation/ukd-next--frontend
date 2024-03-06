@@ -1,0 +1,36 @@
+@import "src/scss/inheritance";
+@import "src/scss/mixin";
+@import "src/scss/var";
+
+.student_details {
+  padding: 0px 15px;
+}
+
+
+.student_details {
+  position: relative;
+  section {
+    margin-top: 18px;
+    h4 {
+      color: $grey-3;
+      font-size: 14px;
+    }
+  }
+
+  section:not(:first-child) {
+    padding-top: 20px;
+    &:before {
+      content: "";
+      position: absolute;
+      margin-top: -10px;
+      height: 1px;
+      width: 100%;
+      background: rgba(241, 241, 241, 0.8);
+      left: 0;
+    }
+  }
+}
+
+.check_title {
+  width: 100%;
+}
