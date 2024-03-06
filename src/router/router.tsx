@@ -36,12 +36,12 @@ export const router = createBrowserRouter([
             element: <SubjectsPage />,
           },
           {
-            path: 'news',
-            element: <NewsPage />,
+            path: 'subjects/:subjectId',
+            element: <GradebookPage />,
           },
           {
-            path: 'subject',
-            element: <GradebookPage />,
+            path: 'news',
+            element: <NewsPage />,
           },
           {
             path: 'payment',

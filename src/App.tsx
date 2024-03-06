@@ -8,7 +8,6 @@ if (typeof window !== 'undefined') {
 }
 
 const App = () => {
-  console.log()
   return (
     <>
       <ScrollRestoration />

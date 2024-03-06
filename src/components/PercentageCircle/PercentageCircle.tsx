@@ -2,7 +2,7 @@ import cls from './PercentageCircle.module.scss'
 import { motion } from 'framer-motion'
 //TODO: Check circle on other android phone
 
-const PercentageCircle = () => {
+const PercentageCircle = ({ averageMark = 4 }) => {
   return (
     <div className={cls.circle_container}>
       <div className={cls.grade_info}>
@@ -51,7 +51,7 @@ const PercentageCircle = () => {
           </svg>
         </motion.div>
         <motion.div layout={'position'} className={cls.grade}>
-          <p className="grade_value">4,4</p>
+          <p className="grade_value">{averageMark.toFixed(1).replace('.', ',')}</p>
         </motion.div>
       </div>
     </div>

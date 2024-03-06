@@ -4,13 +4,13 @@ import { motion } from 'framer-motion'
 import { useFramerScroll } from './hooks/useFramerScroll.ts'
 
 const labels = ['Відвідано', 'Пропущено', 'Відпрацьовано']
-function GradeBookHeader() {
+function GradeBookHeader({ averageMark }) {
   const { circle, flex } = useFramerScroll()
 
   return (
     <div className={cls.subject_performance} style={{ flexDirection: flex }}>
       <div ref={circle}>
-        <PercentageCircle />
+        <PercentageCircle averageMark={averageMark} />
       </div>
       <ul
         className={cls.attendance_stats}
