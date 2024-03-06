@@ -12,8 +12,12 @@ const ProfilePage = () => {
 
   return (
     <div className={cls.profile_container}>
-      <ProfileHeader fullname={data?.fullname} pictureURL={data?.pictureURL} />
-      <ProfileMain email={data?.email} group={data?.group} />
+      <ProfileHeader
+        isLoading={!data?.id}
+        fullname={data?.fullname}
+        pictureURL={data?.pictureURL}
+      />
+      <ProfileMain isLoading={!data?.id} email={data?.email} group={data?.group} />
     </div>
   )
 }

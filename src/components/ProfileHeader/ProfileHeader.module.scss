@@ -29,7 +29,7 @@
 }
 
 .profile_title {
-  font-family: "Fixel Text";
+  font-family: "Fixel Text", sans-serif;
   font-weight: 400;
   font-size: 24px;
 }
@@ -45,16 +45,18 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background: $grey-1; //TODO: Put this to _var
   img {
     border-radius: 50%;
   }
 }
 
 .student_info_container {
-  h2 {
+  .student_name {
     font-size: 18px;
     margin-bottom: 12px;
+  }
+  h2 {
+    font-size: 18px;
   }
   p {
     font-size: 14px;

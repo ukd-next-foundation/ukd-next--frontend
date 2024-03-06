@@ -23,7 +23,11 @@ function Skeleton(props: ISkeleton) {
   return (
     <>
       {show ? (
-        <div className={`${cls.loaders} `} style={{ gap }}>
+        <div
+          data-name={'skeleton'}
+          className={`skeleton_loader ${cls.loaders} `}
+          style={{ gap }}
+        >
           {new Array(props.count).fill('').map(() => (
             <div
               key={id}
