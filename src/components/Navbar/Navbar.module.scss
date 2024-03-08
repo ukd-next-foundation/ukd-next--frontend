@@ -31,5 +31,5 @@
   max-width: 430px;
   border-top: 1.5px solid #cdcdcd;
   border-radius: 17px 17px 0px 0px;
-  padding: 13px 16px 30px 16px;
+  padding: 13px 16px env(safe-area-inset-bottom) 16px;
 }
