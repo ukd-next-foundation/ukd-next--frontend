@@ -1,6 +1,6 @@
-@import "src/scss/inheritance";
-@import "src/scss/mixin";
-@import "src/scss/var";
+@import 'src/scss/inheritance';
+@import 'src/scss/mixin';
+@import 'src/scss/var';
 
 .welcome,
 .welcome_text {
@@ -28,7 +28,7 @@
   border-radius: 30px;
   border: none;
   position: absolute;
-  bottom: 20px;
+  bottom: env(safe-area-inset-bottom);
   padding: 17px;
   max-width: 400px;
   width: 90%;
