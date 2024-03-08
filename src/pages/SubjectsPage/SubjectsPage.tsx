@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { fetchDataWithAxios } from '../../services/api.ts'
 
+interface ISubject {
+  name: string
+  id: string
+}
+
 const SubjectsPage = () => {
   const { data } = useQuery({
     queryFn: () => fetchDataWithAxios('/journals/all-avalible-lesssons'),
@@ -16,8 +21,8 @@ const SubjectsPage = () => {
         <div className={cls.general_subjects}>
           <h4>Загально Освітні предмети</h4>
           <ul className="subject_list">
-            {data?.map((el) => (
-              <Link key={el + 132} to={`/home/subjects/${el.id}`}>
+            {data?.map((el: ISubject, index: number) => (
+              <Link key={index + 132} to={`/home/subjects/${el.id}`}>
                 <li className={cls.subject_item}>
                   <img src="/icons/collections_bookmark.svg" alt="Book" />
                   <div className={cls.subject_info}>

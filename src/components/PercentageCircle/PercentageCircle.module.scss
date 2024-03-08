@@ -2,19 +2,6 @@
 @import 'src/scss/mixin';
 @import 'src/scss/var';
 
-.that_circle {
-  fill: none;
-  stroke-linecap: round;
-  stroke-width: 1.5;
-  border-radius: 20px;
-  animation: progress 0.7s ease-out forwards;
-  box-shadow: 0 8px 25px 0 #e5e5e5;
-}
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
 
 .percentage {
   fill: #4285f4;
@@ -69,8 +56,17 @@
   align-items: center;
   width: 170px;
   height: 180px;
+  svg {
+    position: absolute;
+    max-width: 200px;
+
+    @for $i from 1 to 4 {
+      &:nth-child( #{$i}) {
+        width: calc(210px - (28px * $i));
+      }
+    }
+
+  }
+
 }
 
-svg {
-  position: absolute;
-}

@@ -1,57 +1,25 @@
 import cls from './PercentageCircle.module.scss'
 import { motion } from 'framer-motion'
+import ProgressCircle from '../UI/ProgressCircle/ProgressCircle.tsx'
 //TODO: Check circle on other android phone
 
-const PercentageCircle = ({ averageMark = 4 }) => {
+interface IPercentageCircle {
+  presentPercent: number
+  revisedPercent: number
+  skippedPercent: number
+  averageMark: number
+}
+const PercentageCircle = (props: IPercentageCircle) => {
   return (
     <div className={cls.circle_container}>
       <div className={cls.grade_info}>
         <motion.div layout={'position'} className={cls.circles}>
-          <svg width="185px" viewBox="0 0 36 36" className={cls.circular_chart}>
-            <path
-              className={cls.that_circle}
-              stroke="#A42638"
-              strokeDasharray="50 100"
-              d="M18 2.0845
-							  a 15.9155 15.9155 0 0 1 0 31.831
-							  a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-          </svg>
-
-          <svg
-            width="160px"
-            height="160px"
-            viewBox="0 0 36 36"
-            className={cls.circular_chart}
-          >
-            <path
-              className={cls.that_circle}
-              stroke="#F3AE5C"
-              strokeDasharray="80 100"
-              d="M18 2.0845
-							  a 15.9155 15.9155 0 0 1 0 31.831
-							  a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-          </svg>
-
-          <svg
-            width="135px"
-            height="135px"
-            viewBox="0 0 36 36"
-            className={cls.circular_chart}
-          >
-            <path
-              className={cls.that_circle}
-              stroke="#439D48"
-              strokeDasharray="80 100"
-              d="M18 2.0845
-							  a 15.9155 15.9155 0 0 1 0 31.831
-							  a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-          </svg>
+          <ProgressCircle color={'#A42638'} value={props.presentPercent} />
+          <ProgressCircle color={'#F3AE5C'} value={props.skippedPercent} />
+          <ProgressCircle color={'#439D48'} value={props.revisedPercent} />
         </motion.div>
         <motion.div layout={'position'} className={cls.grade}>
-          <p className="grade_value">{averageMark.toFixed(1).replace('.', ',')}</p>
+          <p className="grade_value">{props.averageMark?.toFixed(1).replace('.', ',')}</p>
         </motion.div>
       </div>
     </div>
