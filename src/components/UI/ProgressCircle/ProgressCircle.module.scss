@@ -1,0 +1,18 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+.that_circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  border-radius: 20px;
+  animation: progress 0.7s ease-out forwards;
+  box-shadow: 0 8px 25px 0 #e5e5e5;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}

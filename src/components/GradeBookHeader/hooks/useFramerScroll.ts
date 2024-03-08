@@ -13,7 +13,7 @@ export function useFramerScroll() {
     }
 
     if (latest > 0.15 && latest !== 1) {
-      circle.current!.style.scale = '.8'
+      circle.current!.style.scale = '.7'
       setFlex('row')
     }
   })
