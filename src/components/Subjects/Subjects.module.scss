@@ -1,0 +1,25 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+.subjects {
+  margin-top: 20px;
+}
+.subject_item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 17px;
+  padding-bottom: 17px;
+}
+
+
+
+.subject_info {
+  width: 100%;
+  @extend %flex-center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(#dedcdc, 0.3);
+  justify-content: space-between;
+}
