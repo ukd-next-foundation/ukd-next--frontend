@@ -1,5 +1,5 @@
 import cls from './Skeleton.module.scss'
-import { ReactNode, useId } from 'react'
+import { ReactNode } from 'react'
 
 interface ISkeleton {
   gap?: number
@@ -18,7 +18,6 @@ interface ISkeleton {
 
 function Skeleton(props: ISkeleton) {
   const { gap = 10, height = 30, width = 200, bgColor, show = true } = props
-  const id = useId()
 
   return (
     <>
@@ -26,11 +25,11 @@ function Skeleton(props: ISkeleton) {
         <div
           data-name={'skeleton'}
           className={`skeleton_loader ${cls.loaders} `}
-          style={{ gap }}
+          style={{ gap, width }}
         >
-          {new Array(props.count).fill('').map(() => (
+          {new Array(props.count).fill('').map((_, index: number) => (
             <div
-              key={id}
+              key={gap * index}
               style={{
                 height,
                 width,

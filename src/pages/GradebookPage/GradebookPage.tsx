@@ -6,6 +6,8 @@ import GradeBookInfo from '../../components/GradeBookInfo/GradeBookInfo.tsx'
 import { useQuery } from '@tanstack/react-query'
 import { fetchDataWithAxios } from '../../services/api.ts'
 import { useParams } from 'react-router'
+import Skeleton from '../../components/Skeleton/Skeleton.tsx'
+import SubjectItemsSkeleton from '../../components/SubjectItemsSkeleton/SubjectItemsSkeleton.tsx'
 
 interface IMark {
   id: number
@@ -21,8 +23,7 @@ function GradebookPage() {
     queryFn: () => fetchDataWithAxios(`/journals/by-lesson/${subjectId}`),
     queryKey: ['lesson', subjectId],
   })
-
-  console.log(data)
+  const isLoading = true
   return (
     <div className={cls.subject_details}>
       <header className="subject_header">
@@ -36,14 +37,16 @@ function GradebookPage() {
             <GradeBookInfo />
           </div>
           <ul className={cls.marks_list}>
-            {data?.marks?.map((markItem: IMark) => (
-              <SubjectItem
-                type={markItem.type}
-                mark={markItem.mark}
-                date={markItem.date}
-                key={markItem.id + 91}
-              />
-            ))}
+            <SubjectItemsSkeleton show={true}>
+              {data?.marks?.map((markItem: IMark) => (
+                <SubjectItem
+                  type={markItem.type}
+                  mark={markItem.mark}
+                  date={markItem.date}
+                  key={markItem.id + 91}
+                />
+              ))}
+            </SubjectItemsSkeleton>
           </ul>
         </motion.div>
       </main>

@@ -1,0 +1,15 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+
+.subject_items_skeletons {
+  width: 100%;
+}
+
+.subject_items_skeleton {
+  width: 100%;
+  margin-top: 20px;
+  @extend %flex-center;
+  gap: 20px;
+}
