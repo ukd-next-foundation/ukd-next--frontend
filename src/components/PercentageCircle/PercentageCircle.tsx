@@ -14,7 +14,7 @@ const PercentageCircle = (props: IPercentageCircle) => {
     <div className={cls.circle_container}>
       <div className={cls.grade_info}>
         <motion.div layout={'position'} className={cls.circles}>
-          <GradebookProgressSkeleton show={true}>
+          <GradebookProgressSkeleton show={!props.presentPercent}>
             <ProgressCircle color={'#A42638'} value={props.presentPercent} />
             <ProgressCircle color={'#F3AE5C'} value={props.skippedPercent} />
             <ProgressCircle color={'#439D48'} value={props.revisedPercent} />
@@ -23,6 +23,7 @@ const PercentageCircle = (props: IPercentageCircle) => {
         <motion.div layout={'position'} className={cls.grade}>
           <Skeleton
             height={50}
+            show={!props.presentPercent}
             width={50}
             bgColor={'rgba(0,0,0,0)'}
             nested={<p className={cls.grade_loader}>5</p>}

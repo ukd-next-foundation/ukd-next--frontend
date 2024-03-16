@@ -36,7 +36,7 @@ function GradeBookHeader({ attendance, averageMark }: IGradeBookHeader) {
             className={cls.attendance_item}
           >
             <div className={cls.attendance_info}>
-              <Skeleton show={true} width={18} height={18} radius={'50%'}>
+              <Skeleton show={!attendance} width={18} height={18} radius={'50%'}>
                 <div className={cls.marker_circle} />
               </Skeleton>
               <p className="attendance_label">{el}</p>

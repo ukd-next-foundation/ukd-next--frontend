@@ -9,8 +9,6 @@ const SubjectsPage = () => {
     queryKey: ['subjects'],
   })
 
-  console.log(!data.length)
-
   return (
     <div className={cls.journals_container}>
       <h1>Журнали</h1>

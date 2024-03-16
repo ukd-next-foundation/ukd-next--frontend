@@ -23,7 +23,7 @@ function GradebookPage() {
     queryFn: () => fetchDataWithAxios(`/journals/by-lesson/${subjectId}`),
     queryKey: ['lesson', subjectId],
   })
-  const isLoading = true
+
   return (
     <div className={cls.subject_details}>
       <header className="subject_header">
@@ -37,7 +37,7 @@ function GradebookPage() {
             <GradeBookInfo />
           </div>
           <ul className={cls.marks_list}>
-            <SubjectItemsSkeleton show={true}>
+            <SubjectItemsSkeleton show={!data}>
               {data?.marks?.map((markItem: IMark) => (
                 <SubjectItem
                   type={markItem.type}
