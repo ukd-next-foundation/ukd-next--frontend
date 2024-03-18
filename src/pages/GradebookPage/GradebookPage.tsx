@@ -6,7 +6,6 @@ import GradeBookInfo from '../../components/GradeBookInfo/GradeBookInfo.tsx'
 import { useQuery } from '@tanstack/react-query'
 import { fetchDataWithAxios } from '../../services/api.ts'
 import { useParams } from 'react-router'
-import Skeleton from '../../components/Skeleton/Skeleton.tsx'
 import SubjectItemsSkeleton from '../../components/SubjectItemsSkeleton/SubjectItemsSkeleton.tsx'
 
 interface IMark {
