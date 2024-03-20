@@ -2,7 +2,6 @@ import { Outlet } from 'react-router'
 import { Navigate, ScrollRestoration } from 'react-router-dom'
 
 let token
-
 if (typeof window !== 'undefined') {
   token = localStorage.getItem('access-token')
 }

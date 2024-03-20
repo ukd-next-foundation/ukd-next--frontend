@@ -1,17 +1,16 @@
 export const dateVariants = {
   other: {
     y: 20,
-    fontSize: "24px",
-    color: "rgb(0, 0, 0)",
+    fontSize: '24px',
+    color: 'rgb(0, 0, 0)',
     fontWeight: 800,
   },
   today: {
     y: 0,
-    // fontSize: "14px",
-    color: "rgb(128, 128, 128)",
+    color: 'rgb(128, 128, 128)',
     fontWeight: 400,
   },
-};
+}
 
 export const todayVariants = {
   other: {
@@ -20,4 +19,4 @@ export const todayVariants = {
   today: {
     y: 0,
   },
-};
+}

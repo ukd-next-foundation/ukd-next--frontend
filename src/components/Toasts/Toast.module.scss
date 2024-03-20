@@ -1,0 +1,81 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+.toast, .toast_content {
+  @extend %flex-center;
+}
+
+.warning {
+  .progress_bar {
+    background: #BF9015;
+  }
+}
+
+.success {
+  .progress_bar {
+    background: green;
+  }
+}
+
+.error {
+  .progress_bar {
+    background: #930E0E;
+  }
+}
+
+.info {
+  .progress_bar {
+    background: #727272;
+  }
+}
+
+.toast {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 8px 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.toast_content {
+  gap: 15px;
+  margin-left: 6px;
+  p {
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 400;
+  }
+}
+
+
+.toast_close_icon {
+  margin-left: 20px;
+  width: 24px;
+  border-left: 2px solid rgba(#6666, .3);
+  align-self: stretch;
+  @extend %flex-center;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.toast_type_img {
+  width: 23px;
+  height: 23px;
+}
+
+.progress_bar {
+  height: 100%;
+  width: 6px;
+  margin-top: 5px;
+  border-radius: 10px;
+  transform-origin: bottom;
+  position: absolute;
+  left: 0;
+}

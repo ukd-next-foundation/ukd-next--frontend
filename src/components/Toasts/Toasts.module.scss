@@ -1,0 +1,17 @@
+@import "src/scss/var";
+@import "src/scss/mixin";
+@import "src/scss/inheritance";
+
+.toasts {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 20px;
+
+}
+
+.toasts_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
