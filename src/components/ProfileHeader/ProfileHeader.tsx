@@ -1,5 +1,6 @@
 import cls from './ProfileHeader.module.scss'
 import Skeleton from '../Skeleton/Skeleton.tsx'
+import { toastStore } from '../../store/ToastStore.ts'
 
 interface IProfileHeader {
   pictureURL: string
@@ -10,7 +11,12 @@ function ProfileHeader({ pictureURL, fullname, isLoading }: IProfileHeader) {
   return (
     <header className={cls.profile_header}>
       <nav className={cls.profile_navigation}>
-        <h1 className={cls.profile_title}>Профіль</h1>
+        <h1
+          className={cls.profile_title}
+          onClick={() => toastStore.toast({ type: 'error', message: 'Hello world' })}
+        >
+          Профіль
+        </h1>
         <div className={cls.settings_container}>
           <img src="/icons/settings.svg" alt="settings" />
         </div>

@@ -3,7 +3,6 @@ import cls from './ProfilePage.module.scss'
 import { fetchDataWithAxios } from '../../services/api'
 import ProfileHeader from '../../components/ProfileHeader/ProfileHeader.tsx'
 import ProfileMain from '../../components/ProfileMain/ProfileMain.tsx'
-import { toastStore } from '../../store/ToastStore.ts'
 
 const ProfilePage = () => {
   const { data } = useQuery({
@@ -13,9 +12,6 @@ const ProfilePage = () => {
 
   return (
     <div className={cls.profile_container}>
-      <button onClick={() => toastStore.toast({ type: 'error', message: 'Hello world' })}>
-        Toast!
-      </button>
       <ProfileHeader
         isLoading={!data?.id}
         fullname={data?.fullname}

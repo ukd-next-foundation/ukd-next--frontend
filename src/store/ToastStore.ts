@@ -10,7 +10,13 @@ const listeners: Set<() => void> = new Set()
 
 export const toastStore = {
   toast({ type, message }: { type: string; message: string }) {
-    toasts = [...toasts, { type, message, id: 'toast-' + nextId++ }]
+    const types = ['error', 'success', 'warning', 'info']
+    const randomTypeIndex = Math.floor(Math.random() * types.length)
+    console.log(type)
+    toasts = [
+      ...toasts,
+      { type: types[randomTypeIndex], message, id: 'toast-' + nextId++ },
+    ]
     emitChange()
   },
 
