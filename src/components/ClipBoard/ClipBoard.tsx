@@ -1,19 +1,19 @@
-import cls from "./ClipBoard.module.scss";
-import { useClipBoard } from "./hooks/useClipBoard.ts";
-import { ReactNode } from "react";
+import cls from './ClipBoard.module.scss'
+import { ReactNode } from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 interface IClipBoard {
-  children: ReactNode;
-  value: string;
+  children: ReactNode
+  value: string
 }
 function ClipBoard({ children, value }: IClipBoard) {
-  const { writeClipboardText } = useClipBoard(value);
   return (
-    <div className={cls.clipboard}>
-      {children}{" "}
-      <img onTouchStart={writeClipboardText} src="/icons/copy.svg" alt="" />
-    </div>
-  );
+    <CopyToClipboard text={value}>
+      <div className={cls.clipboard}>
+        {children} <img src="/icons/copy.svg" alt="" />
+      </div>
+    </CopyToClipboard>
+  )
 }
 
-export default ClipBoard;
+export default ClipBoard
