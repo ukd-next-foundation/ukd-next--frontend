@@ -7,6 +7,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        globPatterns: ['**/*.{ico,png,svg}'],
+      },
       devOptions: {
         enabled: true,
       },
