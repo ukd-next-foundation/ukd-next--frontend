@@ -1,6 +1,6 @@
 import cls from './ProfileHeader.module.scss'
 import Skeleton from '../Skeleton/Skeleton.tsx'
-import { toastStore } from '../../store/ToastStore.ts'
+import { useToast } from '../../hooks/useToast.ts'
 
 interface IProfileHeader {
   pictureURL: string
@@ -8,12 +8,13 @@ interface IProfileHeader {
   isLoading: boolean
 }
 function ProfileHeader({ pictureURL, fullname, isLoading }: IProfileHeader) {
+  const { toast } = useToast()
   return (
     <header className={cls.profile_header}>
       <nav className={cls.profile_navigation}>
         <h1
           className={cls.profile_title}
-          onClick={() => toastStore.toast({ type: 'error', message: 'Hello world' })}
+          onClick={() => toast({ type: 'error', message: 'Hello world' })}
         >
           Профіль
         </h1>
