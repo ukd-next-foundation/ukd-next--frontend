@@ -2,14 +2,10 @@ import { useEffect } from 'react'
 
 const DELAY_TO_REMOVE = 7000
 
-interface IOptions {
-  id: string
-  cb: () => void
-}
-export function useToastRemover(options: IOptions) {
+export function useToastRemover(callback: () => void) {
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      options.cb()
+      callback()
     }, DELAY_TO_REMOVE)
 
     return () => {
@@ -18,6 +14,6 @@ export function useToastRemover(options: IOptions) {
   }, [])
 
   return {
-    removeToastHandler: () => options.cb(),
+    removeToastHandler: () => callback(),
   }
 }

@@ -1,16 +1,18 @@
 import cls from './Toast.module.scss'
-import { IToast, toastStore } from '../../store/ToastStore.ts'
+import { IToast } from '../../store/ToastStore.ts'
 import { useToastRemover } from './hooks/useToastRemover.ts'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { progressVariants, toastVariants } from './framer'
+import { useToast } from '../../hooks/useToast.ts'
 
 function Toast({ id, message, type }: IToast) {
+  const { removeToast } = useToast()
   const [isView, setIsView] = useState(true)
-  const { removeToastHandler } = useToastRemover({ id, cb: () => setIsView(false) })
+  const { removeToastHandler } = useToastRemover(() => setIsView(false))
 
   return (
-    <AnimatePresence onExitComplete={() => toastStore.removeToast(id)}>
+    <AnimatePresence onExitComplete={() => removeToast(id)}>
       {isView && (
         <motion.div
           variants={toastVariants}
