@@ -1,5 +1,6 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://example.cypress.io')
+    cy.viewport('iphone-6')
+    cy.visit('http://localhost:4173/')
   })
 })
