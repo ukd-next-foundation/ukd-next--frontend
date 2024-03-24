@@ -18,7 +18,7 @@ const AuthPage = () => {
         </div>
       </div>
       <button className={cls.auth_button} onClick={() => login()}>
-        <img src="/icons/google.svg" alt="" />
+        <img src="/icons/google.svg" alt="auth-btn-icon" />
         Авторизуватись
       </button>
     </div>
