@@ -1,10 +1,10 @@
 describe('Authorization page testing', () => {
   beforeEach(() => {
+    cy.visit('/')
     cy.viewport('iphone-6')
-    cy.visit('http://localhost:4173/')
   })
 
-  it('should return existabe img', () => {
+  it('should return existable img', () => {
     cy.get('img').should('be.visible')
   })
 
@@ -17,7 +17,7 @@ describe('Authorization page testing', () => {
   })
 
   it('should return existable button', () => {
-    cy.get('button').should('be.visible').and('not.be.disabled')
+    cy.get('button').should('be.visible').and('be.enabled')
     cy.getAlt('auth-btn-icon').should('be.visible')
   })
 })
