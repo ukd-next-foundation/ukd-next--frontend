@@ -9,7 +9,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google'
 import { queryClient } from './react-query'
 import Toasts from './components/Toasts/Toasts.tsx'
 
-//TODO: Put this to .env
+//TODO: Put this to cypress.env.json
 
 const AUTH_CLIENT_ID =
   '711823262458-hhbrq9o6f0sophmsv2a521kfqbpikhp4.apps.googleusercontent.com'

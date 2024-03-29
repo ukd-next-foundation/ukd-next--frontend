@@ -8,3 +8,15 @@ declare namespace Cypress {
 
 Cypress.Commands.add('getEl', (name: string) => cy.get(`[data-cy="${name}"]`))
 Cypress.Commands.add('getAlt', (name: string) => cy.get(`[alt="${name}"]`))
+
+// cypress/support/commands.js
+Cypress.Commands.add('loginByGoogleApi', () => {
+  cy.setCookie('refresh_token', Cypress.env('REFRESH_TOKEN'))
+
+  cy.request({
+    method: 'GET',
+    url: 'https://dev.ukd-next.site/api/v0/auth/refresh',
+  }).then((response) => {
+    cy.log(response)
+  })
+})
