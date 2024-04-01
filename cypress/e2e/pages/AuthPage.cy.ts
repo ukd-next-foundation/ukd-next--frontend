@@ -1,6 +1,6 @@
 describe('Authorization page testing', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/auth')
     cy.viewport('iphone-6')
   })
 
