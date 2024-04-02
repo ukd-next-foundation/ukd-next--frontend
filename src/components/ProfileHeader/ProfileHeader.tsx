@@ -1,6 +1,7 @@
 import cls from './ProfileHeader.module.scss'
-import Skeleton from '../Skeleton/Skeleton.tsx'
+import Skeleton from '../skeletons/Skeleton/Skeleton.tsx'
 import { useToast } from '../../hooks/useToast.ts'
+import Logout from '../Logout/Logout.tsx'
 
 interface IProfileHeader {
   pictureURL: string
@@ -19,7 +20,7 @@ function ProfileHeader({ pictureURL, fullname, isLoading }: IProfileHeader) {
           Профіль
         </h1>
         <div className={cls.settings_container}>
-          <img src="/icons/settings.svg" alt="settings" />
+          <Logout />
         </div>
       </nav>
       <div className={cls.student_info_container}>

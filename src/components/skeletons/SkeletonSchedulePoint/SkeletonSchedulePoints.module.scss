@@ -1,6 +1,6 @@
-@import 'src/scss/var';
-@import 'src/scss/mixin';
-@import 'src/scss/inheritance';
+@import '../../../scss/var';
+@import '../../../scss/mixin';
+@import '../../../scss/inheritance';
 
 .points {
   @extend %flex-center;

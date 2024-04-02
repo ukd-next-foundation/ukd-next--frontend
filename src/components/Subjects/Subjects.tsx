@@ -1,5 +1,5 @@
 import cls from './Subjects.module.scss'
-import Skeleton from '../Skeleton/Skeleton.tsx'
+import Skeleton from '../skeletons/Skeleton/Skeleton.tsx'
 import { Link } from 'react-router-dom'
 
 interface ISubject {

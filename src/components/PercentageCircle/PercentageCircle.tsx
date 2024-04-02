@@ -1,8 +1,8 @@
 import cls from './PercentageCircle.module.scss'
 import { motion } from 'framer-motion'
 import ProgressCircle from '../UI/ProgressCircle/ProgressCircle.tsx'
-import GradebookProgressSkeleton from '../GradebookProgressSkeleton/GradebookProgressSkeleton.tsx'
-import Skeleton from '../Skeleton/Skeleton.tsx'
+import GradebookProgressSkeleton from '../skeletons/GradebookProgressSkeleton/GradebookProgressSkeleton.tsx'
+import Skeleton from '../skeletons/Skeleton/Skeleton.tsx'
 interface IPercentageCircle {
   presentPercent: number
   revisedPercent: number

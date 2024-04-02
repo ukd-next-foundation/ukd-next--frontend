@@ -1,4 +1,4 @@
-import ProgressCircle from '../UI/ProgressCircle/ProgressCircle.tsx'
+import ProgressCircle from '../../UI/ProgressCircle/ProgressCircle.tsx'
 import { ReactNode } from 'react'
 import Skeleton from '../Skeleton/Skeleton.tsx'
 

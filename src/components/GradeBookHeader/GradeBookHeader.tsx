@@ -2,7 +2,7 @@ import cls from './GradeBookHeader.module.scss'
 import PercentageCircle from '../PercentageCircle/PercentageCircle.tsx'
 import { motion } from 'framer-motion'
 import { useFramerScroll } from './hooks/useFramerScroll.ts'
-import Skeleton from '../Skeleton/Skeleton.tsx'
+import Skeleton from '../skeletons/Skeleton/Skeleton.tsx'
 
 const labels = ['Відвідано', 'Пропущено', 'Відпрацьовано']
 

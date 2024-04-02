@@ -1,6 +1,6 @@
 import cls from './ProfileMain.module.scss'
 import ProfileItem from '../ProfileItem/ProfileItem.tsx'
-import Skeleton from '../Skeleton/Skeleton.tsx'
+import Skeleton from '../skeletons/Skeleton/Skeleton.tsx'
 
 interface IProfileMain {
   email: string

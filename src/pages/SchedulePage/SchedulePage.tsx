@@ -6,7 +6,7 @@ import { getTodayOrMonday } from '../../utils/moment.ts'
 import { useState } from 'react'
 import { useLectures } from './hooks/useLectures.ts'
 import { mockData } from './mock'
-import ScheduleSkeleton from '../../components/ScheduleSkeleton/ScheduleSkeleton.tsx'
+import ScheduleSkeleton from '../../components/skeletons/ScheduleSkeleton/ScheduleSkeleton.tsx'
 
 function SchedulePage() {
   const [currentDate, setCurrentDate] = useState(() => getTodayOrMonday())
