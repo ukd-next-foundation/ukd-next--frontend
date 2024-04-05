@@ -1,5 +1,5 @@
-describe('Just another test describe...', () => {
-  it('just another test', () => {
+describe('Authentication flow', () => {
+  it('should return user profile, after authentication', () => {
     cy.visit('/')
     cy.loginByGoogleApi()
   })
