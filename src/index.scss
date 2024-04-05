@@ -20,6 +20,11 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.content {
+  padding: 44px 20px 65px 20px;
 }
 
 h1,
@@ -43,6 +48,3 @@ a {
   text-decoration: none;
 }
 
-.content {
-  padding-bottom: 40px;
-}

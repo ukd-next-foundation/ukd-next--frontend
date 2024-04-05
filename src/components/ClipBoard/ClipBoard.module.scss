@@ -5,9 +5,9 @@
 .clipboard {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   img {
-    //margin-top: -5px;
+    opacity: .6;
     cursor: pointer;
   }
 }

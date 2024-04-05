@@ -46,7 +46,7 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
       </section>
       <section className="personal_info">
         <Skeleton show={isLoading} height={20} width={200}>
-          <h4>Корисна інформація</h4>
+          <h4>Інше</h4>
         </Skeleton>
         <div className={cls.info_group}>
           <Skeleton show={isLoading} height={20} width={'100%'}>

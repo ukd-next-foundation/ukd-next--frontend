@@ -2,10 +2,6 @@
 @import "src/scss/mixin";
 @import "src/scss/var";
 
-.student_details {
-  padding: 0px 15px;
-}
-
 
 .student_details {
   position: relative;
@@ -24,9 +20,9 @@
       position: absolute;
       margin-top: -10px;
       height: 1px;
-      width: 100%;
+      left: -$paddingX;
+      width: 100vw;
       background: rgba(241, 241, 241, 0.8);
-      left: 0;
     }
   }
 }

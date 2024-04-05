@@ -3,7 +3,6 @@
 @import 'src/scss/inheritance';
 
 .journals_container {
-  padding: 30px;
   h1 {
     @extend %page-heading;
   }
