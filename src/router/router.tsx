@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
             element: <NewsPage />,
           },
           {
-            path: 'payment',
+            path: 'profile/payment',
             element: <PaymentDetails />,
           },
         ],

@@ -53,7 +53,7 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
             <ProfileItem
               value={'Реквізити на оплату'}
               icon={'/checkbook.svg'}
-              link={'/home/payment'}
+              link={'/home/profile/payment'}
             />
           </Skeleton>
           <Skeleton show={isLoading} height={20} width={'100%'}>
