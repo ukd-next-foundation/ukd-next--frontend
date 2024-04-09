@@ -8,13 +8,13 @@
 
 .subject_performance {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .attendance_stats {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .attendance_info {

@@ -7,6 +7,8 @@ export function useFramerScroll() {
   const circle = useRef<HTMLDivElement>(null)
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    console.log(document.querySelector('.content')?.scrollHeight)
+
     if (latest < 0.15) {
       circle.current!.style.scale = `min(1, ${1 - latest * 1.5})`
       flex === 'row' && setFlex('column')

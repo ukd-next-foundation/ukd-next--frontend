@@ -23,7 +23,6 @@ function GradebookPage() {
     queryKey: ['lesson', subjectId],
   })
 
-  console.log(data)
   return (
     <div className={cls.subject_details}>
       <header className={cls.subject_header}>
