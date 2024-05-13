@@ -29,7 +29,7 @@ function GradebookPage() {
         <Link to={'/home/subjects'}>
           <img src="/icons/arrow_back.svg" alt="" />
         </Link>
-        <h1 className={cls.subject_title}>Математика</h1>
+        <h1 className={cls.subject_title}>{data?.lessonName}</h1>
       </header>
       <main className={cls.subject_main}>
         <GradeBookHeader attendance={data?.attendance} averageMark={data?.averageMark} />

@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { refreshAccessToken } from './api'
 
-const REFRESH_TOKEN_URL = ''
 const BASE_URL = '/api/v0'
+const REFRESH_TOKEN_URL = BASE_URL + '/auth/refresh'
 
 export const axiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -21,9 +21,12 @@ axiosInstance.interceptors.response.use(
 
     if (error.response.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true
-      const access_token = await refreshAccessToken(REFRESH_TOKEN_URL)
-      axios.defaults.headers.common['Authorization'] = 'Bearer ' + access_token
-      return axiosInstance(originalRequest)
+      const accessToken = await refreshAccessToken(REFRESH_TOKEN_URL)
+
+      if (accessToken) {
+        axios.defaults.headers.common['Authorization'] = 'Bearer ' + accessToken
+        return axiosInstance(originalRequest)
+      }
     }
 
     localStorage.removeItem('access-token')
