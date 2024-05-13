@@ -6,7 +6,7 @@ interface IProfileMain {
   email: string
   group: {
     name: string
-    elder: {
+    curator: {
       fullname: string
     }
   }
@@ -37,7 +37,7 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
             <ProfileItem value={email} icon={'/mail.svg'} copy={email} />
           </Skeleton>
           <Skeleton show={isLoading} width={190} height={20}>
-            <ProfileItem value={group?.elder?.fullname} icon={'/vashyshak.svg'} />
+            <ProfileItem value={group?.curator?.fullname} icon={'/vashyshak.svg'} />
           </Skeleton>
           <Skeleton show={isLoading} width={150} height={20}>
             <ProfileItem value={'095 125 125'} icon={'/call.svg'} copy={'095 125 125'} />

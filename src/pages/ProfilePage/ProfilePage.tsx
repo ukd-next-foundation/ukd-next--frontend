@@ -10,6 +10,8 @@ const ProfilePage = () => {
     queryKey: ['user'],
   })
 
+  console.log(data)
+
   return (
     <div className={cls.profile_container}>
       <ProfileHeader
