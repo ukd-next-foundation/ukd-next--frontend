@@ -14,9 +14,21 @@ export default defineConfig({
         enabled: true,
       },
       manifest: {
+        name: 'UKD Next',
+        short_name: 'UKD Next',
+        description: 'This mobile application UKD Next',
+        theme_color: '#ffffff',
         display: 'standalone',
+        orientation: 'portrait',
         start_url: '/home/profile',
         scope: '.',
+        icons: [
+          {
+            src: '/icons/ukd_logo.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+          },
+        ],
       },
     }),
   ],
