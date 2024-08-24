@@ -1,6 +1,7 @@
 import cls from './ProfileMain.module.scss'
 import ProfileItem from '../ProfileItem/ProfileItem.tsx'
 import Skeleton from '../skeletons/Skeleton/Skeleton.tsx'
+import FeatureFlags from '../FeatureFlags/FeatureFlags.tsx'
 
 interface IProfileMain {
   email: string
@@ -56,9 +57,11 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
               link={'/home/profile/payment'}
             />
           </Skeleton>
-          <Skeleton show={isLoading} height={20} width={'100%'}>
-            <ProfileItem value={'Корисна інформація'} icon={'/info3.svg'} link={'#'} />
-          </Skeleton>
+          <FeatureFlags flagParam={'profileFAQEnabled'}>
+            <Skeleton show={isLoading} height={20} width={'100%'}>
+              <ProfileItem value={'Корисна інформація'} icon={'/info3.svg'} link={'#'} />
+            </Skeleton>
+          </FeatureFlags>
         </div>
       </section>
     </main>
