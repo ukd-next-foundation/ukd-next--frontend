@@ -4,6 +4,7 @@ import ScheduleSubjects from '../ScheduleSubjects/ScheduleSubjects.tsx'
 import { useLecturesInterval } from './hooks/useScheduleInterval.ts'
 import { getDayFrameFromToday } from '../../utils/moment.ts'
 import { Dispatch, SetStateAction } from 'react'
+import ScheduleRefetchBtn from '../ScheduleRefetchBtn/ScheduleRefetchBtn.tsx'
 
 interface IScheduleMain {
   lectures: any
@@ -17,20 +18,26 @@ function ScheduleMain({ lectures, currentDate, setCurrentDate }: IScheduleMain) 
 
   return (
     <section className={cls.schedule_main}>
-      <Points
-        isTodayFrame={isTodayFrame}
-        pairs={lectures}
-        activeId={currentLecture}
-        prevId={prevLecture}
-        dayFrame={dayFrame}
-      />
-      <ScheduleSubjects
-        isTodayFrame={isTodayFrame}
-        pairs={lectures}
-        activeId={currentLecture}
-        prevId={prevLecture}
-        dayFrame={dayFrame}
-      />
+      {lectures.length ? (
+        <>
+          <Points
+            isTodayFrame={isTodayFrame}
+            pairs={lectures}
+            activeId={currentLecture}
+            prevId={prevLecture}
+            dayFrame={dayFrame}
+          />
+          <ScheduleSubjects
+            isTodayFrame={isTodayFrame}
+            pairs={lectures}
+            activeId={currentLecture}
+            prevId={prevLecture}
+            dayFrame={dayFrame}
+          />{' '}
+        </>
+      ) : (
+        <ScheduleRefetchBtn currentDate={currentDate} />
+      )}
     </section>
   )
 }
