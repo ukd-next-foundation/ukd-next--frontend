@@ -1,6 +1,6 @@
-ARG ENVIRONMENT=production
-
 FROM node:22-alpine AS builder
+
+ARG ENVIRONMENT
 
 WORKDIR /app
 COPY . .
