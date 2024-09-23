@@ -1,10 +1,12 @@
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
+
+ARG ENVIRONMENT
 
 WORKDIR /app
 COPY . .
 
 RUN yarn install 
-RUN yarn build
+RUN yarn build --mode ${ENVIRONMENT}
 
 
 FROM alpine:latest

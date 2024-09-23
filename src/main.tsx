@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import './index.scss'
+import ReactGA from 'react-ga4'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router/router'
 import './fonts/fonts.scss'
@@ -9,14 +10,11 @@ import { GoogleOAuthProvider } from '@react-oauth/google'
 import { queryClient } from './react-query'
 import Toasts from './components/Toasts/Toasts.tsx'
 
-//TODO: Put this to cypress.env.json
-
-const AUTH_CLIENT_ID =
-  '711823262458-hhbrq9o6f0sophmsv2a521kfqbpikhp4.apps.googleusercontent.com'
+ReactGA.initialize(import.meta.env.VITE_GOOGLE_TRACKING_ID)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement).render(
   <QueryClientProvider client={queryClient}>
-    <GoogleOAuthProvider clientId={AUTH_CLIENT_ID}>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
       <RouterProvider router={router} />
     </GoogleOAuthProvider>
     <Toasts />
