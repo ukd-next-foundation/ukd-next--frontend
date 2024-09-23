@@ -1,86 +1,33 @@
 export const mockData = [
   {
-    id: 10,
-    date: "2024-03-04",
-    startAt: "8:30:00",
-    endAt: "9:30:00",
-    type: "LECTURE",
-    createdAt: "2024-02-11T14:36:15.654Z",
-    updatedAt: "2024-02-11T14:36:15.654Z",
-    classroom: {
-      id: 187,
-      name: "конф.зал малий",
+    "id": "01921e8b-c75f-7551-a3ba-248aa19395c8",
+    "date": "2024-09-23T00:00:00.000Z",
+    "startAt": "20:30",
+    "endAt": "20:51",
+    "type": "SEMINAR",
+    "createdAt": "2024-09-23T11:02:10.290Z",
+    "updatedAt": "2024-09-23T11:02:10.290Z",
+    "isCanceled": false,
+    "lesson": {
+      "id": "0191ff5a-52cb-7cc6-ad8b-357a757a532a",
+      "name": "Рекреаційна психологія"
     },
-    teacher: {
-      id: 607,
-      email: "serhii.vaschyshak@ukd.edu.ua",
-      fullname: "Сергій Ващишак",
+    "teacher": {
+      "id": "0191ff4d-a23e-7bb6-a96b-f5cc72d441c0",
+      "fullname": "Питлюк-Смеречинська Олександра Дмитрівна",
+      "email": "null_237e43e7000814c2ec4c@ukd.edu.ua"
     },
-    groups: [
+    "classroom": {
+      "id": "019204a6-0760-7ff7-8426-5616183fc2ee",
+      "name": "ауд.427",
+      "isOnline": false,
+      "onlineLink": null
+    },
+    "groups": [
       {
-        id: 1,
-        name: "МІПЗс-23-1",
-      },
-    ],
-    lesson: {
-      id: 8,
-      name: "Година куратора",
-    },
-  },
-  {
-    id: 11,
-    date: "2024-03-04",
-    startAt: "13:00:00",
-    endAt: "15:30:00",
-    type: "LECTURE",
-    createdAt: "2024-02-11T14:36:56.791Z",
-    updatedAt: "2024-02-11T14:36:56.791Z",
-    classroom: {
-      id: 126,
-      name: "327/1",
-    },
-    teacher: {
-      id: 605,
-      email: "oleh.pashkevych@ukd.edu.ua",
-      fullname: "Олег Пашкевич",
-    },
-    groups: [
-      {
-        id: 1,
-        name: "МІПЗс-23-1",
-      },
-    ],
-    lesson: {
-      id: 7,
-      name: "Методологія розробки програмного забезпечення",
-    },
-  },
-  {
-    id: 12,
-    date: "2024-03-04",
-    startAt: "15:40:00",
-    endAt: "16:30:00",
-    type: "LECTURE",
-    createdAt: "2024-02-11T14:37:05.828Z",
-    updatedAt: "2024-02-11T14:37:05.828Z",
-    classroom: {
-      id: 126,
-      name: "327/1",
-    },
-    teacher: {
-      id: 605,
-      email: "oleh.pashkevych@ukd.edu.ua",
-      fullname: "Олег Пашкевич",
-    },
-    groups: [
-      {
-        id: 1,
-        name: "МІПЗс-23-1",
-      },
-    ],
-    lesson: {
-      id: 7,
-      name: "Методологія розробки програмного забезпечення",
-    },
+        "id": "0191ff30-2574-7bb6-a964-26dee7c98b30",
+        "name": "Пс-23-1"
+      }
+    ]
   },
 ];

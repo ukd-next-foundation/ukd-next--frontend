@@ -29,12 +29,12 @@ function ScheduleSubject(props: IScheduleSubject) {
       </div>
       <div className={cls.details_info}>
         <small className={cls.subject_time}>
-          {lecture.startAt.slice(0, -3)} - {lecture.endAt.slice(0, -3)}
+          {lecture.startAt} - {lecture.endAt}
         </small>
         <>
           {lecture?.classroom?.name && (
             <small className={cls.subject_location}>
-              ауд. <b>{lecture.classroom.name}</b>
+              <b>{lecture.classroom.name}</b>
             </small>
           )}
         </>

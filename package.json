@@ -1,5 +1,5 @@
 {
-  "name": "ukd-next-client",
+  "name": "clear",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -27,7 +27,8 @@
     "react-ga4": "^2.1.0",
     "react-query": "^3.39.3",
     "react-router": "^6.21.1",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@tanstack/react-query-devtools": "^5.17.21",
@@ -46,5 +47,9 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-plugin-pwa": "^0.19.0"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

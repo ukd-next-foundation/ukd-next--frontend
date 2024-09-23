@@ -1,22 +1,25 @@
 import axios from 'axios'
 import { axiosInstance } from './axios'
 
-export const refreshAccessToken = async function (refreshTokenUrl: string): Promise<null | string> {
-    return await axios.get(refreshTokenUrl, {
+export const refreshAccessToken = async function (
+  refreshTokenUrl: string
+): Promise<null | string> {
+  return await axios
+    .get(refreshTokenUrl, {
       withCredentials: true,
     })
-    .then(response => {
+    .then((response) => {
       localStorage.setItem('access-token', response.data.accessToken)
       return response.data.accessToken
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err)
       return null
     })
 }
 
-export const fetchDataWithAxios = async function (url: string) {
-  const { data } = await axiosInstance.get(url)
+export const fetchDataWithAxios = async function (url: string, params?: object) {
+  const { data } = await axiosInstance.get(url, { params })
   return data
 }
 
