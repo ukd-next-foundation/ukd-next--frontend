@@ -1,5 +1,5 @@
 import moment from 'moment/min/moment-with-locales'
-moment.locale('uk')
+moment.updateLocale(moment.locale('uk'), { invalidDate: 'Невідома дата' })
 
 const FORMAT = 'YYYY-MM-DD'
 const SCHEDULE_FORMAT = 'MMMM, D, YYYY'

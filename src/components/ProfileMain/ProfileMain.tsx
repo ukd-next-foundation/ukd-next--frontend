@@ -9,6 +9,8 @@ interface IProfileMain {
     name: string
     curator: {
       fullname: string
+      email: string
+      phone: string
     }
   }
   isLoading: boolean
@@ -24,9 +26,6 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
           <Skeleton show={isLoading} width={150} height={20}>
             <ProfileItem value={group?.name} icon={'/group.svg'} />
           </Skeleton>
-          <Skeleton show={isLoading} height={20} width={180}>
-            <ProfileItem value={'095 125 125'} icon={'/call.svg'} />
-          </Skeleton>
         </div>
       </section>
       <section className="personal_info">
@@ -35,13 +34,17 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
         </Skeleton>
         <div className={cls.info_group}>
           <Skeleton show={isLoading} width={220} height={20}>
-            <ProfileItem value={email} icon={'/mail.svg'} copy={email} />
+            <ProfileItem value={group?.curator?.email} icon={'/mail.svg'} copy={email} />
           </Skeleton>
           <Skeleton show={isLoading} width={190} height={20}>
             <ProfileItem value={group?.curator?.fullname} icon={'/vashyshak.svg'} />
           </Skeleton>
           <Skeleton show={isLoading} width={150} height={20}>
-            <ProfileItem value={'095 125 125'} icon={'/call.svg'} copy={'095 125 125'} />
+            <ProfileItem
+              value={group?.curator?.phone}
+              icon={'/call.svg'}
+              copy={'095 125 125'}
+            />
           </Skeleton>
         </div>
       </section>
@@ -56,6 +59,9 @@ function ProfileMain({ email, group, isLoading }: IProfileMain) {
               icon={'/checkbook.svg'}
               link={'/home/profile/payment'}
             />
+          </Skeleton>
+          <Skeleton show={isLoading} height={20} width={'100%'}>
+            <ProfileItem value={'Змінити роль'} icon={'/roles_icon.svg'} link={'#'} />
           </Skeleton>
           <FeatureFlags flagParam={'profileFAQEnabled'}>
             <Skeleton show={isLoading} height={20} width={'100%'}>

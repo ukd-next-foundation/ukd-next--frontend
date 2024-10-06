@@ -1,15 +1,10 @@
-import { useQuery } from '@tanstack/react-query'
 import cls from './ProfilePage.module.scss'
-import { fetchDataWithAxios } from '../../services/api'
 import ProfileHeader from '../../components/ProfileHeader/ProfileHeader.tsx'
 import ProfileMain from '../../components/ProfileMain/ProfileMain.tsx'
+import { useProfileData } from '../../hooks/useProfileData.ts'
 
 const ProfilePage = () => {
-  const { data } = useQuery({
-    queryFn: () => fetchDataWithAxios('/users/profile'),
-    queryKey: ['user'],
-  })
-
+  const data = useProfileData()
   return (
     <div className={cls.profile_container}>
       <ProfileHeader
