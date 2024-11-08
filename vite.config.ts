@@ -24,9 +24,22 @@ export default defineConfig({
         scope: '.',
         icons: [
           {
-            src: '/icons/ukd_logo.svg',
-            sizes: 'any',
+            src: '/icons/app/icon-vector.svg',
             type: 'image/svg+xml',
+            sizes: 'any',
+            purpose: 'any',
+          },
+          {
+            src: '/icons/app/icon-192-maskable.png',
+            type: 'image/png',
+            sizes: '192x192',
+            purpose: 'maskable',
+          },
+          {
+            src: '/icons/app/icon-512-maskable.png',
+            type: 'image/png',
+            sizes: '512x512',
+            purpose: 'maskable',
           },
         ],
       },
