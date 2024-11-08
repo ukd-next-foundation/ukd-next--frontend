@@ -1,3 +1,4 @@
+import { sentryVitePlugin } from '@sentry/vite-plugin'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -44,10 +45,19 @@ export default defineConfig({
         ],
       },
     }),
+    sentryVitePlugin({
+      org: 'ukd-next',
+      project: 'frontend-app',
+    }),
   ],
+
   server: {
     proxy: {
       '/api': 'https://dev.ukd-next.site/',
     },
+  },
+
+  build: {
+    sourcemap: true,
   },
 })
