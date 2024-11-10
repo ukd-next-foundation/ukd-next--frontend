@@ -9,9 +9,11 @@ RUN yarn install
 RUN yarn build --mode ${ENVIRONMENT}
 
 
-FROM alpine:latest
+FROM nginx:alpine
 
-WORKDIR /static
-COPY --from=builder /app/dist ./
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 
-CMD ["sleep", "infinity"]
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
